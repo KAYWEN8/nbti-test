@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>NBTI 人格鉴定</title>
-<meta name="description" content="哦？SBTI都来了，那我的NBTI呢？——30道灵魂拷问，鉴定你在这个世界的真实NPC属性。">
+<meta name="description" content="哦？SBTI都来了，那我的NBTI呢？——31道灵魂拷问，鉴定你在NPC世界的段位。">
 <meta property="og:title" content="NBTI人格鉴定">
-<meta property="og:description" content="哦？SBTI都来了，那我的NBTI呢？30道灵魂拷问，测你的真实NPC属性。">
+<meta property="og:description" content="哦？SBTI都来了，那我的NBTI呢？31道灵魂拷问，测你的NPC段位。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nbti.coco.dev">
 <meta property="og:image" content="https://nbti.coco.dev/share.png">
@@ -39,23 +39,14 @@ button:active{transform:scale(.97)}
 button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .btn-primary{background:var(--accent-strong);color:#fff;padding:14px 20px;border-radius:14px;box-shadow:0 12px 30px rgba(77,106,83,.18);font-weight:700}
 .btn-secondary{background:#fff;color:var(--accent-strong);padding:14px 20px;border-radius:14px;border:1px solid var(--line);font-weight:700}
-
-/* ===== IP ===== */
 .ip{width:100px;height:100px;margin:0 auto 16px;animation:bob 3s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-
-/* ===== HOME ===== */
 .hero{padding:28px;margin-top:20px;overflow:hidden;position:relative;min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:linear-gradient(180deg,rgba(127,165,134,.18),rgba(127,165,134,.02));pointer-events:none}
-.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--accent-strong);border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:8px 14px;margin-bottom:16px;font-weight:700}
 .hero h1{font-size:clamp(26px,6vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:900}
 .hero h1 em{font-style:normal;color:var(--accent-strong)}
 .hero .sub{margin-top:14px;color:var(--muted);font-size:15px;line-height:1.75;max-width:360px}
 .hero-actions{margin-top:28px;display:flex;gap:12px;justify-content:center}
-.hero-footer{margin-top:28px;display:flex;flex-direction:column;font-size:12px;color:var(--muted);line-height:1.8}
-.hero-footer a{color:var(--accent-strong);text-decoration:none;font-weight:600}
-
-/* ===== QUIZ ===== */
 .test-wrap{margin-top:22px;padding:22px}
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap}
 .progress{flex:1;min-width:200px;height:10px;background:#edf3ee;border-radius:999px;overflow:hidden}
@@ -74,15 +65,11 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .option.selected{border-color:var(--accent-strong);background:var(--soft)}
 .actions-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}
 .hint{color:var(--muted);font-size:13px;line-height:1.7}
-
-/* ===== LOADING ===== */
 .ld-wrap{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:42px 24px}
 .ld-spin{width:48px;height:48px;border-radius:50%;border:4px solid var(--line);border-top-color:var(--accent-strong);animation:spin .7s linear infinite;margin:20px 0}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ld-wrap b{color:var(--accent-strong);font-size:17px}
 .ld-wrap p{color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6}
-
-/* ===== RESULT ===== */
 .result-wrap{margin-top:22px;padding:22px}
 .result-layout{display:grid;gap:18px}
 .result-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:stretch}
@@ -92,7 +79,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .poster-emoji{font-size:72px;position:relative;z-index:1}
 .poster-caption{margin-top:14px;color:var(--muted);font-size:14px;line-height:1.8;text-align:center;position:relative;z-index:1;font-style:italic}
 .type-kicker{font-size:12px;color:var(--accent-strong);margin-bottom:8px;letter-spacing:.06em;font-weight:700}
-.type-name{font-size:clamp(24px,5vw,40px);line-height:1.1;letter-spacing:-.03em;font-weight:900}
+.type-name{font-size:clamp(22px,5vw,36px);line-height:1.15;letter-spacing:-.03em;font-weight:900}
 .type-subname{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.8}
 .match{margin-top:16px;display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:10px 14px;background:var(--soft);border:1px solid var(--line);color:var(--accent-strong);font-weight:700;font-size:14px}
 .rbox h3{font-size:16px;margin-bottom:12px}
@@ -116,6 +103,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .poster-overlay .poster-close:hover{opacity:1}
 .btn-share{background:linear-gradient(135deg,#5b7a62,#3d5a44);color:#fff;border:none;padding:12px 24px;border-radius:24px;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.5px}
 .btn-share:active{transform:scale(.96)}
+.dim-section-title{font-size:13px;font-weight:700;color:var(--accent-strong);margin-bottom:6px;padding:6px 12px;background:var(--soft);border-radius:10px;display:inline-block}
 @media(max-width:600px){.shell{padding:14px 12px 42px}.hero,.test-wrap,.result-wrap{padding:16px}.result-top{grid-template-columns:1fr}}
 </style>
 </head>
@@ -145,6 +133,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
       </svg>
     </div>
     <h1>哦？SBTI都来了，<br>那我的<em>NBTI</em>呢？</h1>
+    <p class="sub">31道灵魂拷问 · ABCDE五档鉴定<br>从人间清醒到阴间大佬，你在NPC世界到底什么段位？</p>
     <div class="hero-actions">
       <button class="btn-primary" id="startBtn">开始鉴定</button>
     </div>
@@ -156,14 +145,14 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
   <div class="test-wrap card">
     <div class="topbar">
       <div class="progress"><span id="bar"></span></div>
-      <div class="progress-text" id="ptext">0 / 30</div>
+      <span class="progress-text" id="ptext">0 / 31</span>
     </div>
-    <div id="qlist" class="question-list"></div>
+    <div class="question-list" id="qlist"></div>
     <div class="actions-bottom">
-      <div class="hint" id="qhint">全选完才会放行。世界已经够抽象了，起码把题做完整。</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <button class="btn-secondary" id="backBtn">返回首页</button>
-        <button class="btn-primary" id="submitBtn" disabled>提交并查看结果</button>
+      <span class="hint" id="qhint">选完所有题后才能提交哦</span>
+      <div style="display:flex;gap:10px">
+        <button class="btn-secondary" id="backBtn">返回</button>
+        <button class="btn-primary" id="submitBtn" disabled>提交鉴定</button>
       </div>
     </div>
   </div>
@@ -172,19 +161,9 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 <!-- ===== LOADING ===== -->
 <section id="loading" class="screen">
   <div class="ld-wrap card">
-    <div class="ip" style="width:70px;height:70px">
-      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="65" r="45" fill="#b8d8ba" stroke="#5b7a62" stroke-width="2.5"/>
-        <circle cx="44" cy="55" r="8" fill="#fff" stroke="#5b7a62" stroke-width="2"/>
-        <circle cx="76" cy="55" r="8" fill="#fff" stroke="#5b7a62" stroke-width="2"/>
-        <circle cx="46" cy="56" r="3.5" fill="#1e2a22"><animate attributeName="cx" values="43;49;43" dur="1.5s" repeatCount="indefinite"/></circle>
-        <circle cx="78" cy="56" r="3.5" fill="#1e2a22"><animate attributeName="cx" values="75;81;75" dur="1.5s" repeatCount="indefinite"/></circle>
-        <path d="M48 73 Q60 78 72 73" stroke="#5b7a62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      </svg>
-    </div>
     <div class="ld-spin"></div>
-    <b>正在深度扫描你的精神状态...</b>
-    <p>系统正在翻阅你的NPC行为数据库<br>请稍候，别退出</p>
+    <b>NPC段位鉴定中…</b>
+    <p>正在分析你的31个灵魂选择…<br>系统正在翻阅你的NPC档案…</p>
   </div>
 </section>
 
@@ -213,381 +192,308 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 
 <script>
 /* ============================================================
-   NBTI — NPC Behavioral Type Indicator
-   全部原创 · 2026 · @费率
+   NBTI 人格鉴定 · 31题完整版
+   结构参照SBTI，内容全部原创
+   计分：A=5 B=4 C=3 D=2 E=1，满分155，最低31
    ============================================================ */
 
+/* ---------- 3个维度 ---------- */
 var DIMS=[
-  {id:'face',  name:'装逼指数',  lo:'朴实无华',hi:'人均爱马仕'},
-  {id:'money', name:'败家等级',  lo:'一毛不拔',hi:'月光永动机'},
-  {id:'oil',   name:'油腻浓度',  lo:'清爽小鲜肉',hi:'八两菜籽油'},
-  {id:'slave', name:'打工指数',  lo:'财务自由',hi:'社畜本畜'},
-  {id:'naive', name:'冤种含量',  lo:'精明老狐狸',hi:'韭菜本韭'},
-  {id:'fish',  name:'摸鱼段位',  lo:'卷王本王',hi:'摸鱼宗师'},
-  {id:'thick', name:'脸皮厚度',  lo:'薄如蝉翼',hi:'防弹级'},
-  {id:'toxic', name:'毒舌值',    lo:'人间棉花糖',hi:'嘴里淬了毒'},
-  {id:'lick',  name:'舔狗指数',  lo:'高冷教主',hi:'舔到失联'}
+  {id:'d1',name:'社会毒性指数',lo:'人间清醒',hi:'人间毒瘤',range:[1,10]},
+  {id:'d2',name:'社交NPC等级',lo:'万人迷体质',hi:'社恐终极体'},
+  {id:'d3',name:'精神状态鉴定',lo:'心态大师',hi:'随时爆炸'}
 ];
 
-var TYPES=[
-  {
-    code:'ZHUANG-B',cn:'装逼佬',emoji:'🕶️',
-    intro:'不装了，摊牌了，我就是比你们都强。',
-    desc:'恭喜你解锁了全网最稀有的人格。你不是在装逼，你只是在陈述事实——虽然事实有时候被你美化了亿点点。你的朋友圈是精心策划的个人纪录片，你的口头禅是"这个我之前就知道了"。你不允许自己在任何领域输给任何人，哪怕是一个你完全不懂的领域。',
-    traits:['#朋友圈导演','#凡尔赛本赛','#我早就知道了','#气场两米八'],
-    v:{face:98,money:45,oil:45,slave:15,naive:5,fish:10,thick:65,toxic:35,lick:5}
-  },
-  {
-    code:'PAY-ALL',cn:'败家子',emoji:'💸',
-    intro:'钱不是省出来的，是花光的。',
-    desc:'你的银行卡余额和你的理性永远处于赛跑状态，而余额永远跑得更快。购物车是你的精神寄托，快递柜是你的第二个家。你信奉"人生苦短及时行乐"，翻译成人话就是：管他下个月怎么活，这个包我今天必须买。',
-    traits:['#花呗VIP','#购物车满了','#钱是王八蛋','#月光艺术家'],
-    v:{face:50,money:98,oil:20,slave:40,naive:60,fish:30,thick:30,toxic:15,lick:40}
-  },
-  {
-    code:'OIL-MAN',cn:'油腻男优',emoji:'🫠',
-    intro:'帅不帅不重要，重要的是我觉得我帅。',
-    desc:'你照镜子的时间比护肤的时间长，你发自拍的频率比喝水还高。你觉得自己是行走的荷尔蒙，事实上你是行走的油田。你给每个异性的评论都带着一股若有若无的暧昧味儿，你管这叫"绅士风度"，别人管这叫"油到滑倒"。',
-    traits:['#自拍狂魔','#行走油田','#暧昧制造机','#自我感觉巨好'],
-    v:{face:50,money:20,oil:98,slave:10,naive:30,fish:20,thick:55,toxic:10,lick:80}
-  },
-  {
-    code:'996-ER',cn:'打工仔',emoji:'🔧',
-    intro:'打工打工，打到最后只剩个工。',
-    desc:'你的人生简历可以用四个字概括——一直在忙。你不是在加班就是在去加班的路上，周末是用来补觉的，假期是用来赶项目的。你已经分不清工作和生活的边界了，因为你根本没有生活。你的微信步数全是从工位到厕所再回来。',
-    traits:['#永远在忙','#工位钉子户','#周末是什么','#社畜天花板'],
-    v:{face:5,money:10,oil:5,slave:98,naive:35,fish:2,thick:20,toxic:15,lick:20}
-  },
-  {
-    code:'BIG-YUAN',cn:'大冤种',emoji:'🤡',
-    intro:'别人笑我太天真，我笑别人看不穿。',
-    desc:'你是朋友圈里被坑得最多的那个人。团购你先付钱、AA你多出、被放鸽子你说没事。你不是傻，你是善良到没有底线。所有人都觉得你好欺负，而你还在傻笑着说"没关系"。冤种之王，非你莫属。',
-    traits:['#请客常驻选手','#好人卡收藏家','#被坑无感体','#善良到欠费'],
-    v:{face:5,money:35,oil:5,slave:35,naive:98,fish:10,thick:5,toxic:2,lick:60}
-  },
-  {
-    code:'POOR-G',cn:'正宗穷鬼',emoji:'🥲',
-    intro:'我不是穷，我只是没钱。',
-    desc:'你的余额是个谜，你的花呗是个坑，你的存款是个传说。你精通各种薅羊毛技巧，9块9包邮是你的精神食粮。你不是不想消费升级，你是连消费降级的资格都没有。但你穷得坦荡，穷得有骨气，穷得理直气壮。',
-    traits:['#9块9战士','#薅羊毛博士','#余额不足','#精致穷鬼'],
-    v:{face:5,money:2,oil:5,slave:65,naive:45,fish:55,thick:30,toxic:20,lick:25}
-  },
-  {
-    code:'FISH-GOD',cn:'摸鱼冠军',emoji:'🐟',
-    intro:'上班这件事，全靠演技。',
-    desc:'你把摸鱼这件事发展成了一门艺术。你能在老板走过来的0.3秒内切换到工作界面，你的浏览器永远有一个假装在用的Excel。你不是不会工作，你只是觉得把生命浪费在工作上太可惜了。你的座右铭是：能躺着绝不坐着，能摸鱼绝不干活。',
-    traits:['#Alt+Tab大师','#带薪拉屎','#Excel挡箭牌','#演技派打工人'],
-    v:{face:10,money:15,oil:10,slave:40,naive:15,fish:98,thick:55,toxic:15,lick:5}
-  },
-  {
-    code:'OLD-OIL',cn:'老油条',emoji:'🦊',
-    intro:'年轻人，你这个套路我十年前就玩过了。',
-    desc:'你是职场里的终极生存者，什么大风大浪没见过。你永远知道该说什么不该说什么，该做什么不该做什么。你从不站队但又和所有人保持关系，你从不加班但绩效从来不低。新人看你觉得你在摆烂，老板看你觉得你靠谱得很。',
-    traits:['#职场生存指南','#从不背锅','#永远不站队','#看破不说破'],
-    v:{face:40,money:25,oil:35,slave:50,naive:2,fish:65,thick:60,toxic:30,lick:5}
-  },
-  {
-    code:'TOP-1',cn:'天花板',emoji:'👑',
-    intro:'不好意思，你们的天花板就是我的地板。',
-    desc:'你在任何领域都习惯性地做到最好——不是因为你有多努力，而是因为你觉得做不到第一是一种耻辱。你的存在让周围人又崇拜又嫉妒，你的随便一句话都能让人记半年。你不是在凡尔赛，你是真的强。问题是：你什么时候能学会收着点？',
-    traits:['#遥遥领先','#别人的天花板','#低调不了一点','#随便做做就第一'],
-    v:{face:90,money:50,oil:30,slave:30,naive:2,fish:5,thick:45,toxic:40,lick:2}
-  },
-  {
-    code:'GANG-J',cn:'杠精',emoji:'⚔️',
-    intro:'你说的对，但是我不同意。',
-    desc:'你的嘴里永远有一个"但是"在等着。别人说太阳是圆的你要杠，说水是湿的你也要杠，说今天是星期三你还是要杠。你不是为了证明什么，你只是觉得不反驳一下浑身难受。你的微信群里永远有人想踢你但又舍不得——因为你杠得确实有道理。',
-    traits:['#但是战士','#逢人必杠','#杠出真理','#嘴巴是最强武器'],
-    v:{face:25,money:15,oil:10,slave:20,naive:5,fish:15,thick:80,toxic:98,lick:2}
-  },
-  {
-    code:'LICK-DOG',cn:'死舔狗',emoji:'🐶',
-    intro:'你回个消息我能开心一整天。',
-    desc:'你把卑微这件事做到了极致。对方说一句"嗯"你能分析出十七种情绪；对方说"在忙"你立马道歉"打扰了"；对方朋友圈发了张图你能写出800字小作文。你不是在谈恋爱，你是在进行一场漫长的单方面供养。最可悲的是——你自己也知道，但就是停不下来。',
-    traits:['#已读不回分析师','#早安晚安机器','#备胎中的战斗机','#舔到失联'],
-    v:{face:10,money:35,oil:50,slave:25,naive:70,fish:8,thick:5,toxic:2,lick:98}
-  },
-  {
-    code:'LAO-TJ',cn:'老太监',emoji:'🫥',
-    intro:'我没意见，你们开心就好。',
-    desc:'你已经把"无欲无求"这四个字刻进了DNA。什么事都行，什么饭都吃，什么班都上，什么委屈都受。你不是没脾气，你是觉得有脾气太累了。你的口头禅是"都行""随便""你定"，你把自己活成了一个人形背景板。你以为这叫佛系，其实这叫——精神太监。',
-    traits:['#随便教主','#都行大师','#人形背景板','#情绪已阉割'],
-    v:{face:2,money:12,oil:5,slave:45,naive:35,fish:60,thick:12,toxic:2,lick:25}
-  },
-  {
-    code:'DU-SHE',cn:'毒舌妇',emoji:'🐍',
-    intro:'我说话难听？那是因为事实难听。',
-    desc:'你的嘴开过光——是往毒的方向开的。你能用一句话让人笑着笑着就哭了，能用一条评论让发帖的人想注销账号。你不是故意的，你只是没有那个"话到嘴边留三分"的过滤器。朋友们又爱又怕你：爱你的真实，怕你的嘴巴。',
-    traits:['#嘴里淬了毒','#一句话暴击','#真实到残忍','#毒舌但真诚'],
-    v:{face:30,money:20,oil:15,slave:25,naive:8,fish:30,thick:75,toxic:95,lick:2}
-  },
-  {
-    code:'MA-PI',cn:'马屁精',emoji:'🐴',
-    intro:'领导你今天气色真好！（背后翻白眼）',
-    desc:'你是职场里的人际关系天花板——往上管理。你能在0.5秒内读懂领导的微表情，然后精准输出一句让领导心花怒放的彩虹屁。你不觉得这叫拍马屁，你管这叫"向上沟通能力"。同事们背后说你是戏精，但年终奖下来的时候——真香。',
-    traits:['#彩虹屁大师','#向上管理','#读心术一级','#年终奖收割机'],
-    v:{face:20,money:15,oil:35,slave:55,naive:5,fish:20,thick:80,toxic:5,lick:90}
-  },
-  {
-    code:'MU-JI',cn:'母鸡鸭',emoji:'🐔',
-    intro:'你这样不行的你听我说你得这样！',
-    desc:'你操的心比居委会大妈还多。朋友吃什么穿什么你管，同事工作怎么做你管，路边陌生人带没带伞你都想管。你把全世界当成了你的养殖场，所有人都是你要照顾的小鸡仔。别人没问你意见你也要给，给完还要追问"你听了没有？"',
-    traits:['#操心命','#居委会体质','#你听我说','#大家长本大家长'],
-    v:{face:15,money:20,oil:30,slave:35,naive:30,fish:2,thick:55,toxic:60,lick:25}
-  },
-  {
-    code:'NICE-GUY',cn:'老好人',emoji:'😇',
-    intro:'没事，我不介意的，真的。',
-    desc:'你把"好人"这个角色演到了无法自拔的地步。所有人的忙你都帮、所有人的约你都赴、所有人的要求你都答应。你最怕的事情是别人不开心，哪怕那个"别人"根本不在乎你。你笑着说的每一句"没事"背后，都藏着一个默默受委屈的灵魂。',
-    traits:['#没事本没事','#来者不拒','#受委屈大师','#好人卡满级'],
-    v:{face:5,money:20,oil:10,slave:30,naive:85,fish:5,thick:2,toxic:2,lick:55}
-  },
-  {
-    code:'SALE-GOD',cn:'销冠哥',emoji:'💰',
-    intro:'这个东西不买你会后悔一辈子的。',
-    desc:'你能把梳子卖给秃子、把冰箱卖给爱斯基摩人。你嘴里说出来的每句话都带着成交的气息，你微笑的弧度精确到能让人掏出钱包。你不是在社交，你是在一场永不落幕的路演。你对"商机"的嗅觉比狗还灵敏——闻到就咬住不放。',
-    traits:['#嘴是印钞机','#行走的广告牌','#你不买我不走','#逮谁推销谁'],
-    v:{face:50,money:30,oil:55,slave:30,naive:5,fish:2,thick:98,toxic:20,lick:20}
-  },
-  {
-    code:'RICH-ER',cn:'暴发户',emoji:'🤑',
-    intro:'这个多少钱？不用说了，来两个。',
-    desc:'你的存在意义就是让所有人知道你有钱。你的车钥匙永远摆在桌上最显眼的位置，你的消费不看价格只看贵不贵。你不是在炫富，你是在"分享生活"——一种月消费六位数起步的生活。你最大的恐惧是有人比你更有钱还比你低调。',
-    traits:['#钱是纸一样','#车钥匙摆件','#人前显贵','#低调不了一点'],
-    v:{face:95,money:98,oil:60,slave:5,naive:25,fish:15,thick:70,toxic:25,lick:5}
-  },
-  {
-    code:'DEEP-ER',cn:'本地第一深情',emoji:'🥀',
-    intro:'我爱过，真的爱过，只是没人信。',
-    desc:'你把自己活成了一首行走的伤感情歌。你的朋友圈永远是深夜的感悟和模糊的背影，你的歌单全是"我们再也回不去了"。你觉得自己是这座城市最深情的人，但事实是——你上一段感情结束不到两周你就开始深情下一个了。你爱的不是某个人，你爱的是"深情"这件事本身。',
-    traits:['#深夜感悟大师','#朋友圈伤感诗人','#换人不换人设','#深情是表演'],
-    v:{face:25,money:20,oil:35,slave:10,naive:55,fish:15,thick:15,toxic:5,lick:95}
-  }
+/* ---------- 10个段位（按总分） ---------- */
+var RANKS=[
+  {min:145,max:155,title:'人间瑰宝·终极大圣人',emoji:'☀️',
+   sub:'好到离谱，系统都想给你磕一个',
+   desc:'你就是传说中"别人家的孩子"本人。善良到发光、情商拉满、运气逆天，走到哪里都是团宠。你的存在就是对"人间值得"这四个字的最好证明。阎王见了都要给你让座，财神爷天天追着你跑。唯一的缺点：太完美了，让身边人压力很大。',
+   traits:['#行走的正能量','#锦鲤体质','#全员团宠','#人间值得代言人']},
+  {min:130,max:144,title:'人间极品·天选锦鲤王',emoji:'🐟',
+   sub:'好运爆棚，走哪旺哪',
+   desc:'你是那种"刮彩票都能中奖"的体质。不是你主动做好事，而是好事主动找你。情商高、人缘好、做事靠谱，身边朋友都想沾你的好运气。你的朋友圈就是一个大型凡尔赛现场，但大家不仅不酸，反而替你开心。',
+   traits:['#自带好运buff','#走哪旺哪','#凡尔赛本赛','#人缘收割机']},
+  {min:115,max:129,title:'优质NPC·社交天花板',emoji:'🌟',
+   sub:'人缘炸裂，走到哪都受欢迎',
+   desc:'你是社交场合的氛围担当，有你在的地方就没有冷场。你不是讨好型人格，而是真心对人好。说话好听、办事靠谱、从不内耗。如果人生是游戏，你就是那个人人都想组队的S级NPC。',
+   traits:['#氛围担当','#靠谱代名词','#快乐制造机','#零内耗选手']},
+  {min:100,max:114,title:'靠谱NPC·温柔守护者',emoji:'🛡️',
+   sub:'低调靠谱，朋友心中的定海神针',
+   desc:'你是那种"不会第一个想到，但遇事第一个找"的人。不张扬、不炫耀，默默把事情做好。偶尔有点小情绪，但从不影响别人。在朋友心中，你就是安全感的代名词，是暴风雨中不会倒的那棵树。',
+   traits:['#沉默靠谱型','#安全感担当','#有事找我','#不显山不露水']},
+  {min:85,max:99,title:'普通NPC·及格线选手',emoji:'😐',
+   sub:'不好不坏，人间凑数的',
+   desc:'你就是路上随处可见的普通人——不坑人也不圣母，不惹事也不怕事。运气一般，偶尔走运偶尔背时。你的座右铭是"差不多得了"，你的人生态度是"过得去就行"。平凡但真实，这就是你的NPC人生。',
+   traits:['#差不多先生','#不惹事体质','#平凡且真实','#及格线选手']},
+  {min:70,max:84,title:'问题NPC·嘴硬心软怪',emoji:'🫣',
+   sub:'毛病不少，但本质不坏',
+   desc:'你身上有一堆小毛病——嘴硬、偶尔摆烂、说话不过脑子。但你本质不坏，只是不太会表达。你的口头禅是"无所谓"，但心里比谁都在乎。朋友对你的评价永远是"这人吧……又爱又恨"。',
+   traits:['#嘴硬心软','#又爱又恨','#人间矛盾体','#口嫌体正直']},
+  {min:55,max:69,title:'麻烦NPC·行走的雷区',emoji:'💣',
+   sub:'容易踩雷，建议保持距离',
+   desc:'你是那种"不是故意的但总是搞砸事情"的人。社恐+嘴毒+偶尔敷衍，让人又无奈又头疼。你不是坏人，但你的行为经常让人想骂一句"你是不是故意的"。好消息是你偶尔也会可爱，坏消息是频率很低。',
+   traits:['#行走的雷区','#偶尔可爱','#不是故意的','#令人头大']},
+  {min:40,max:54,title:'毒瘤NPC·负能量发电机',emoji:'☠️',
+   sub:'自带debuff，近者遭殃',
+   desc:'你就是那种"遇到就自认倒霉"的存在。抱怨是你的日常、甩锅是你的技能、冷嘲热讽是你的母语。你不是运气差，你就是差本身。朋友越来越少不是没有原因的——谁愿意天天被你的负能量核辐射？',
+   traits:['#负能量核弹','#甩锅大师','#人间debuff','#自带倒霉光环']},
+  {min:25,max:39,title:'地狱NPC·终极扫把星',emoji:'👹',
+   sub:'走到哪祸到哪，地狱欢迎你',
+   desc:'你的存在就是对周围人的一场灾难。自私到极致、脾气炸到爆、怼天怼地怼空气。你的人生剧本就是一部恐怖片——主角不是你，受害者才是。如果NPC有黑名单，你绝对排在第一页。',
+   traits:['#人形灾难','#黑名单常客','#脾气炸弹','#一个人就是一支毒']},
+  {min:0,max:24,title:'地狱Boss·阴间讨债鬼',emoji:'💀',
+   sub:'阎王见了都绕道，人间行走的诅咒',
+   desc:'恭喜你解锁了NPC世界的最终Boss形态。你不是在作恶，你就是恶本身。你的存在让身边所有人都在思考一个哲学问题："这人是怎么活到今天的？"你自带毁灭光环，走到哪里哪里就变成废墟。建议原地封印，不要祸害人间了。',
+   traits:['#人间诅咒','#阴间VIP','#毁灭光环','#建议封印']}
 ];
 
-/* ---------- 30道题（每选项直投2个人格+维度分） ---------- */
+/* ---------- 31道题（全部ABCDE五选一） ---------- */
+/* 第一维度：做人底线（1-10题）测你对别人有多离谱 */
+/* 第二维度：社交段位（11-20题）测你有多讨人嫌 */
+/* 第三维度：精神状态（21-31题）测你心态有多炸裂 */
 var QS=[
-  {q:'周五晚上，群聊炸了——"今晚出来嗨！"',opts:[
-    {t:'秒回"来了"，顺便把酒吧订了',s:{face:8,money:10,oil:5},tag:['PAY-ALL','RICH-ER']},
-    {t:'先看看谁请客再决定去不去',s:{face:-3,money:-5,oil:-3,thick:8},tag:['OLD-OIL','SALE-GOD']},
-    {t:'"在忙"（其实在家刷手机）',s:{fish:12,thick:3},tag:['FISH-GOD','LAO-TJ']},
-    {t:'已读不回，第二天说手机没电',s:{fish:8,thick:10,toxic:5},tag:['GANG-J','DU-SHE']}
+  {q:'路上有个老人摔倒了，你的第一反应？',dim:'d1',opts:[
+    {t:'冲上去扶，还掏出手机帮叫救护车'},
+    {t:'扶起来确认没事再走，做好事不留名'},
+    {t:'观望一下，看看有没有别人去扶'},
+    {t:'掏手机，但不是打120——是录视频'},
+    {t:'绕道走，心想"别讹上我"'}
   ]},
-  {q:'新出了一双限量球鞋，你：',opts:[
-    {t:'不管好不好看先抢了再说',s:{money:12,naive:8,face:5},tag:['PAY-ALL','BIG-YUAN']},
-    {t:'看看高仿的能不能以假乱真',s:{face:5,thick:8,money:-5},tag:['ZHUANG-B','POOR-G']},
-    {t:'球鞋？我还在穿前年的',s:{money:-10,slave:8},tag:['POOR-G','996-ER']},
-    {t:'买完立刻发朋友圈',s:{face:12,oil:8,money:8},tag:['ZHUANG-B','RICH-ER']}
+  {q:'室友/同事的外卖到了，但他在忙，你会？',dim:'d1',opts:[
+    {t:'主动帮拿上来，还提醒他趁热吃'},
+    {t:'顺路就帮带，不顺路也会说一声'},
+    {t:'他让我帮拿就拿，不说就算了'},
+    {t:'假装没看到通知消息'},
+    {t:'帮拿了但偷吃几口，谁叫他不自己去'}
   ]},
-  {q:'有人当面阴阳怪气你一句：',opts:[
-    {t:'当场怼回去，而且怼得更狠',s:{toxic:12,thick:8,naive:-8},tag:['GANG-J','DU-SHE']},
-    {t:'表面微笑，内心骂了800遍',s:{oil:5,slave:5,lick:5},tag:['OLD-OIL','NICE-GUY']},
-    {t:'"哈哈是吗"然后装没听懂',s:{fish:8,thick:8},tag:['LAO-TJ','FISH-GOD']},
-    {t:'回家越想越气凌晨还在想',s:{naive:10,thick:-8,lick:8},tag:['BIG-YUAN','DEEP-ER']}
+  {q:'朋友发了条很丑的自拍让你评价，你说？',dim:'d1',opts:[
+    {t:'夸到飞起，还帮P图让TA更好看'},
+    {t:'真诚夸优点，委婉建议角度'},
+    {t:'嗯嗯好看好看（敷衍三连）'},
+    {t:'直接说"一般般吧"然后截图发群里笑'},
+    {t:'群里@所有人：快来看这张照片笑死我了'}
   ]},
-  {q:'领导在群里@你"明天加班"，你：',opts:[
-    {t:'"好的领导！"（秒回+微笑表情）',s:{slave:12,oil:5,lick:10},tag:['MA-PI','996-ER']},
-    {t:'假装没看到，等别人先回复',s:{fish:12,thick:5},tag:['FISH-GOD','LAO-TJ']},
-    {t:'"领导，加班有加班费吗？"',s:{thick:12,toxic:8},tag:['GANG-J','TOP-1']},
-    {t:'已经在想明天怎么请假了',s:{fish:12,thick:8,oil:-3},tag:['FISH-GOD','OLD-OIL']}
+  {q:'你捡到别人的手机（里面有很多隐私），你会？',dim:'d1',opts:[
+    {t:'原地等失主，或者交给工作人员'},
+    {t:'翻通讯录找家人联系归还'},
+    {t:'放在原地，没必要管闲事'},
+    {t:'关机带走，想想怎么处理'},
+    {t:'翻相册看看有没有劲爆内容'}
   ]},
-  {q:'朋友借你500块说下周还：',opts:[
-    {t:'"好的没问题"（内心已经当送了）',s:{naive:12,thick:-8,lick:8},tag:['NICE-GUY','LICK-DOG']},
-    {t:'"可以，到时候记得转我"',s:{thick:5,toxic:3},tag:['TOP-1','SALE-GOD']},
-    {t:'"刚好我也没钱"（其实有）',s:{thick:10,money:-8},tag:['POOR-G','OLD-OIL']},
-    {t:'"借钱免谈，请吃饭可以"',s:{thick:8,toxic:5,face:5},tag:['GANG-J','ZHUANG-B']}
+  {q:'排队买奶茶，前面有人插队，你的反应？',dim:'d1',opts:[
+    {t:'微笑提醒对方"不好意思后面排哦"'},
+    {t:'小声嘀咕但不直接说'},
+    {t:'算了，多等一个人也没啥'},
+    {t:'拍照发群里吐槽，但不当面说'},
+    {t:'直接怼："看不到人在排队？没长眼睛？"'}
   ]},
-  {q:'你的朋友圈日常：',opts:[
-    {t:'精修自拍+高端场所定位',s:{face:12,oil:10},tag:['ZHUANG-B','RICH-ER']},
-    {t:'三天可见/仅自己可见',s:{fish:8},tag:['LAO-TJ','FISH-GOD']},
-    {t:'转发各种砍一刀/投票链接',s:{naive:10,lick:5},tag:['BIG-YUAN','MU-JI']},
-    {t:'只发工作相关（被迫营业）',s:{slave:12},tag:['996-ER','MA-PI']}
+  {q:'有人在你背后说你坏话，传到了你耳朵里，你会？',dim:'d1',opts:[
+    {t:'当没发生过，做好自己就行'},
+    {t:'找机会跟对方聊聊看是不是误会'},
+    {t:'心里记着但不表现，以后少来往'},
+    {t:'背后也说回去，以牙还牙'},
+    {t:'当面撕破脸，还在群里挂TA'}
   ]},
-  {q:'在一个全是陌生人的饭局上：',opts:[
-    {t:'主动敬酒认识全场',s:{oil:10,face:8,thick:8},tag:['SALE-GOD','ZHUANG-B']},
-    {t:'找个角落坐下默默吃饭',s:{fish:10},tag:['LAO-TJ','NICE-GUY']},
-    {t:'全程吐槽这个饭局',s:{toxic:12,thick:8},tag:['DU-SHE','GANG-J']},
-    {t:'疯狂夸菜好吃夸人好看',s:{oil:8,lick:10},tag:['MA-PI','LICK-DOG']}
+  {q:'同事/同学考了满分而你没及格，你的内心戏？',dim:'d1',opts:[
+    {t:'真心为TA开心，主动请教学习方法'},
+    {t:'羡慕但不嫉妒，偷偷努力追上去'},
+    {t:'有点酸但不表现出来'},
+    {t:'嘴上恭喜，心里嘀咕"肯定是抄的"'},
+    {t:'找各种理由贬低TA，看不得别人好'}
   ]},
-  {q:'路上捡到100块钱：',opts:[
-    {t:'二话不说塞兜里',s:{thick:8,money:5},tag:['OLD-OIL','POOR-G']},
-    {t:'发朋友圈"今天运气不错"',s:{face:10,oil:8},tag:['ZHUANG-B','SALE-GOD']},
-    {t:'交给警察叔叔',s:{naive:12,thick:-8},tag:['NICE-GUY','BIG-YUAN']},
-    {t:'请旁边的朋友喝奶茶',s:{money:8,naive:5,lick:5},tag:['PAY-ALL','DEEP-ER']}
+  {q:'你在网上买的东西，商家多发了一件，你会？',dim:'d1',opts:[
+    {t:'主动联系商家退回，做人凭良心'},
+    {t:'问问商家要不要补差价'},
+    {t:'装不知道，白嫖就白嫖了'},
+    {t:'还发朋友圈炫耀"薅羊毛成功"'},
+    {t:'找商家其他链接再试试能不能继续漏发'}
   ]},
-  {q:'你最讨厌的一句话：',opts:[
-    {t:'"你能不能便宜点"',s:{face:10,money:5,thick:5},tag:['RICH-ER','SALE-GOD']},
-    {t:'"你怎么又在摸鱼"',s:{fish:12,slave:5},tag:['FISH-GOD','996-ER']},
-    {t:'"你脾气太好了吧"',s:{naive:10,lick:8},tag:['NICE-GUY','LICK-DOG']},
-    {t:'"你这个人太假了"',s:{oil:8,thick:5},tag:['OIL-MAN','OLD-OIL']}
+  {q:'朋友找你借3000块说月底还，你会？',dim:'d1',opts:[
+    {t:'二话不说就转，朋友有难义不容辞'},
+    {t:'借了，但温柔提醒到期记得还'},
+    {t:'看关系远近决定借不借'},
+    {t:'"刚好手头也紧"（其实不紧）'},
+    {t:'不仅不借还群里广播"XX又来借钱了"'}
   ]},
-  {q:'关于"上班"这件事：',opts:[
-    {t:'班味已经渗入灵魂了',s:{slave:15,fish:-8},tag:['996-ER','NICE-GUY']},
-    {t:'上班全靠演，摸鱼才是真',s:{fish:12,oil:3,thick:8},tag:['FISH-GOD','OLD-OIL']},
-    {t:'我上班是为了上班之后的消费',s:{money:10,slave:5},tag:['PAY-ALL','RICH-ER']},
-    {t:'班？我已经很久没上了',s:{slave:-10,fish:10,toxic:5},tag:['TOP-1','GANG-J']}
+  {q:'你开车不小心蹭了别人停着的车，周围没人，你会？',dim:'d1',opts:[
+    {t:'留字条写上联系方式等车主来'},
+    {t:'打电话给保险公司走正规流程'},
+    {t:'看看严不严重，不严重就……算了吧'},
+    {t:'赶紧溜，又没摄像头'},
+    {t:'溜了还嘀咕"谁让你停那么突出的"'}
   ]},
-  {q:'有人在群里说了一个明显错误的观点：',opts:[
-    {t:'忍不住，必须纠正他',s:{toxic:12,thick:8},tag:['GANG-J','DU-SHE']},
-    {t:'打字打了一半又删了',s:{naive:8,thick:-5,lick:5},tag:['LICK-DOG','BIG-YUAN']},
-    {t:'截图发到另一个群里吐槽',s:{toxic:10,oil:5},tag:['DU-SHE','MU-JI']},
-    {t:'管他呢，和我有啥关系',s:{fish:12,thick:5},tag:['LAO-TJ','FISH-GOD']}
+  {q:'公司团建，你到了现场发现一个都不认识，你的表现？',dim:'d2',opts:[
+    {t:'主动自我介绍，五分钟和全场混熟'},
+    {t:'找一两个人搭话，慢慢融入'},
+    {t:'找个角落坐着玩手机，等有人来找我'},
+    {t:'全程黑脸，散发"别来烦我"的气场'},
+    {t:'待了十分钟直接走人，还发朋友圈吐槽'}
   ]},
-  {q:'喜欢的人发了一条朋友圈：',opts:[
-    {t:'秒赞+精心编辑一条评论',s:{lick:15,oil:8},tag:['LICK-DOG','MA-PI']},
-    {t:'看了三遍但什么都没做',s:{lick:10,naive:8,thick:-8},tag:['DEEP-ER','BIG-YUAN']},
-    {t:'故意等几个小时再点赞装高冷',s:{face:8,oil:8},tag:['ZHUANG-B','OIL-MAN']},
-    {t:'无所谓，我对谁都一样',s:{thick:8,lick:-12,fish:8},tag:['LAO-TJ','TOP-1']}
+  {q:'朋友生日，群里在组织庆祝，你的反应？',dim:'d2',opts:[
+    {t:'主动策划惊喜，买蛋糕订场地全包了'},
+    {t:'积极参与，认真挑礼物送祝福'},
+    {t:'群里发个生日快乐表情包'},
+    {t:'既不出钱也不出力，潜水装死'},
+    {t:'"过什么生日，有那钱不如请我吃饭"'}
   ]},
-  {q:'你的消费观：',opts:[
-    {t:'该花的花，不该花的也花',s:{money:15,naive:5},tag:['PAY-ALL','RICH-ER']},
-    {t:'每一笔都记账，月底复盘',s:{money:-10,slave:8},tag:['996-ER','POOR-G']},
-    {t:'9块9包邮是我的快乐源泉',s:{money:-10,naive:5},tag:['POOR-G','BIG-YUAN']},
-    {t:'花钱要花在刀刃上——面子上',s:{face:12,money:8,oil:5},tag:['ZHUANG-B','SALE-GOD']}
+  {q:'有人当众夸你"你人真的超好"，你的反应？',dim:'d2',opts:[
+    {t:'开心收下，继续做让大家舒服的人'},
+    {t:'谦虚地说"哪有"，心里美滋滋'},
+    {t:'嘴上说谢谢，心里觉得无所谓'},
+    {t:'"少给我戴高帽，你是不是又要借钱"'},
+    {t:'"好人有什么用？好人卡倒是收了一沓"'}
   ]},
-  {q:'别人请你帮忙，你：',opts:[
-    {t:'"好的没问题"（内心崩溃）',s:{naive:12,thick:-10,lick:10},tag:['NICE-GUY','LICK-DOG']},
-    {t:'"看什么忙"',s:{thick:8,toxic:5},tag:['TOP-1','GANG-J']},
-    {t:'"帮可以，请吃饭"',s:{thick:8,oil:3,money:5},tag:['SALE-GOD','OLD-OIL']},
-    {t:'"我最近也挺忙的"（其实在追剧）',s:{fish:12,thick:8},tag:['FISH-GOD','LAO-TJ']}
+  {q:'同事上班摸鱼被你发现了，你会？',dim:'d2',opts:[
+    {t:'帮忙打掩护，谁还没摸过鱼呢'},
+    {t:'当没看到，各自安好'},
+    {t:'开个玩笑提醒一下'},
+    {t:'截图存着，以后万一用得上'},
+    {t:'直接跟领导打小报告'}
   ]},
-  {q:'你觉得自己最大的优点：',opts:[
-    {t:'长得好看（自信脸）',s:{face:10,oil:10,thick:8},tag:['ZHUANG-B','OIL-MAN']},
-    {t:'人缘好',s:{naive:5,lick:8,oil:5},tag:['NICE-GUY','MU-JI']},
-    {t:'能挣钱',s:{money:5,slave:8,thick:5},tag:['RICH-ER','996-ER']},
-    {t:'嘴甜',s:{oil:8,lick:8},tag:['MA-PI','SALE-GOD']}
+  {q:'微信群里有人发了一个你觉得很蠢的观点，你会？',dim:'d2',opts:[
+    {t:'耐心解释正确的信息，态度友好'},
+    {t:'私聊指正，不让对方当众丢脸'},
+    {t:'看了但懒得回，管他呢'},
+    {t:'在群里阴阳怪气地回复'},
+    {t:'截图发另一个群："你们快来看这智商"'}
   ]},
-  {q:'你的手机壁纸：',opts:[
-    {t:'自拍/精修照',s:{face:10,oil:10},tag:['ZHUANG-B','OIL-MAN']},
-    {t:'对象/暗恋对象',s:{lick:12,naive:8},tag:['LICK-DOG','DEEP-ER']},
-    {t:'默认壁纸懒得换',s:{fish:10,slave:5},tag:['LAO-TJ','FISH-GOD']},
-    {t:'一张很贵的名牌Logo',s:{face:10,money:8},tag:['RICH-ER','PAY-ALL']}
+  {q:'别人说话的时候你通常？',dim:'d2',opts:[
+    {t:'认真听，还会回应"然后呢？"鼓励对方说'},
+    {t:'正常听，该回应就回应'},
+    {t:'听着但脑子在想别的事'},
+    {t:'频繁打断："你说的不对……"'},
+    {t:'直接玩手机，等对方说完来一句"哈？你刚说啥"'}
   ]},
-  {q:'在饭桌上谁买单的问题：',opts:[
-    {t:'"我来我来！"（手比谁都快）',s:{face:12,money:10,naive:5},tag:['PAY-ALL','RICH-ER']},
-    {t:'假装上厕所',s:{fish:10,thick:10},tag:['OLD-OIL','FISH-GOD']},
-    {t:'"AA吧"',s:{thick:5,toxic:3},tag:['GANG-J','TOP-1']},
-    {t:'等别人付然后象征性推一下',s:{oil:8,naive:3},tag:['OIL-MAN','MA-PI']}
+  {q:'朋友约你出去但你不想去，你怎么拒绝？',dim:'d2',opts:[
+    {t:'真诚说明原因，约个下次的时间'},
+    {t:'委婉说今天有事，改天约'},
+    {t:'已读不回，等对方忘了这事'},
+    {t:'"去你那破地方有啥好玩的"'},
+    {t:'答应了但放鸽子，到时间了说"忘了"'}
   ]},
-  {q:'你理想中的周末：',opts:[
-    {t:'约朋友出去消费',s:{money:10,face:5,oil:5},tag:['PAY-ALL','ZHUANG-B']},
-    {t:'在家躺着什么都不做',s:{fish:15},tag:['FISH-GOD','LAO-TJ']},
-    {t:'加班赚加班费',s:{slave:15,fish:-10},tag:['996-ER','POOR-G']},
-    {t:'找对象约会',s:{lick:10,oil:8},tag:['LICK-DOG','DEEP-ER']}
+  {q:'你请朋友帮忙，对方说没时间，你的反应？',dim:'d2',opts:[
+    {t:'理解万岁，自己想别的办法'},
+    {t:'"没事，你忙你的"，然后找别人'},
+    {t:'有点不开心但不表现'},
+    {t:'记在心里，下次TA找我帮忙也不帮'},
+    {t:'当场翻脸："平时你找我帮忙我哪次拒绝了？"'}
   ]},
-  {q:'如果突然有了100万：',opts:[
-    {t:'先买个包犒劳自己',s:{money:12,naive:5},tag:['PAY-ALL','RICH-ER']},
-    {t:'存银行一分不动',s:{money:-10,slave:8,thick:5},tag:['POOR-G','996-ER']},
-    {t:'投资赚更多',s:{thick:8,money:3},tag:['TOP-1','SALE-GOD']},
-    {t:'请所有人吃饭让他们知道',s:{face:12,money:10,oil:8},tag:['RICH-ER','ZHUANG-B']}
+  {q:'收到一份完全不对胃口的礼物，你的表现？',dim:'d2',opts:[
+    {t:'真诚感谢，心想"心意最重要"'},
+    {t:'笑着收下，私下该转手转手'},
+    {t:'"谢谢啊"（面无表情）'},
+    {t:'当面吐槽"你怎么送这玩意儿"'},
+    {t:'背后跟其他人吐槽送礼的人审美有病'}
   ]},
-  {q:'你在朋友眼中是：',opts:[
-    {t:'有钱人',s:{face:10,money:10,oil:5},tag:['RICH-ER','ZHUANG-B']},
-    {t:'老实人',s:{naive:12,thick:-8,lick:8},tag:['NICE-GUY','BIG-YUAN']},
-    {t:'狠人',s:{thick:10,toxic:10},tag:['GANG-J','TOP-1']},
-    {t:'搞笑的',s:{oil:8,naive:5},tag:['MU-JI','OIL-MAN']}
+  {q:'你在公司/学校的人设是？',dim:'d2',opts:[
+    {t:'谁都喜欢的大好人，公认的团宠'},
+    {t:'靠谱老好人，虽然低调但口碑很好'},
+    {t:'透明人，没啥存在感也没啥仇恨值'},
+    {t:'有点刺儿头，该怼就怼不留情'},
+    {t:'人人避之不及的"那个人"'}
   ]},
-  {q:'收到一份不满意的礼物：',opts:[
-    {t:'"哇好喜欢！"（假笑到脸僵）',s:{oil:8,naive:5,lick:8},tag:['MA-PI','NICE-GUY']},
-    {t:'"这啥啊…下次别买了"',s:{toxic:12,thick:8},tag:['DU-SHE','GANG-J']},
-    {t:'收了之后转手送人',s:{thick:8,oil:-3},tag:['OLD-OIL','TOP-1']},
-    {t:'发朋友圈感动打卡',s:{face:8,oil:8,lick:5},tag:['ZHUANG-B','LICK-DOG']}
+  {q:'周一闹钟响了，你的第一个念头？',dim:'d3',opts:[
+    {t:'新的一周！元气满满冲冲冲！'},
+    {t:'深呼吸，起床，正常面对'},
+    {t:'再躺五分钟……好吧十分钟'},
+    {t:'闹钟关了直接请假算了'},
+    {t:'把闹钟砸了，人生没有意义'}
   ]},
-  {q:'和领导一起电梯里只有你俩：',opts:[
-    {t:'"领导你气色真好今天！"',s:{oil:10,lick:12},tag:['MA-PI','SALE-GOD']},
-    {t:'低头玩手机假装没看到',s:{fish:10},tag:['LAO-TJ','FISH-GOD']},
-    {t:'尬聊今天天气',s:{naive:5,slave:3},tag:['NICE-GUY','996-ER']},
-    {t:'正常打个招呼然后沉默',s:{slave:5,thick:3},tag:['TOP-1','OLD-OIL']}
+  {q:'努力了很久的事情没有任何回报，你的心态？',dim:'d3',opts:[
+    {t:'不气馁，复盘总结继续冲'},
+    {t:'失落一阵子，调整后重新出发'},
+    {t:'摆烂几天再说，反正急也没用'},
+    {t:'彻底放弃，认命了'},
+    {t:'疯狂自我攻击+迁怒身边人'}
   ]},
-  {q:'做了一件丢脸的事：',opts:[
-    {t:'没脸见人了要社死了',s:{naive:10,thick:-10,lick:5},tag:['BIG-YUAN','DEEP-ER']},
-    {t:'自己先当段子讲出来',s:{thick:10,oil:5},tag:['MU-JI','OIL-MAN']},
-    {t:'装作啥事没发生',s:{fish:8,thick:8},tag:['OLD-OIL','LAO-TJ']},
-    {t:'怪别人"都是你害的"',s:{toxic:10,thick:5},tag:['DU-SHE','GANG-J']}
+  {q:'你在网上看到一个杠精疯狂喷你，你会？',dim:'d3',opts:[
+    {t:'微笑关闭评论区，不值得浪费时间'},
+    {t:'冷静回复一条，然后拉黑'},
+    {t:'忍不住对骂几句，骂完又后悔'},
+    {t:'大战三百回合，不骂赢不罢休'},
+    {t:'人肉搜索对方，线上追到线下'}
   ]},
-  {q:'你对"努力"的看法：',opts:[
-    {t:'不努力就死定了',s:{slave:12,fish:-10},tag:['996-ER','NICE-GUY']},
-    {t:'努力不如站对队伍',s:{oil:5,thick:8},tag:['OLD-OIL','SALE-GOD']},
-    {t:'能躺着绝不站着',s:{fish:15,slave:-8},tag:['FISH-GOD','LAO-TJ']},
-    {t:'你看我像努力的人吗',s:{fish:10,thick:8,toxic:5},tag:['TOP-1','GANG-J']}
+  {q:'朋友发了条朋友圈晒年薪百万的offer，你的心态？',dim:'d3',opts:[
+    {t:'真心祝福！给TA点赞评论三连'},
+    {t:'有点羡慕但也替TA开心'},
+    {t:'看完默默划走，心里五味杂陈'},
+    {t:'酸到变形，截图发群吐槽"装什么"'},
+    {t:'去评论区阴阳："哦，那你请客吧"'}
   ]},
-  {q:'关于"合群"：',opts:[
-    {t:'我在哪哪就是C位',s:{face:12,oil:8,thick:8},tag:['ZHUANG-B','TOP-1']},
-    {t:'配合着聊但内心在摸鱼',s:{fish:8,oil:5},tag:['OLD-OIL','OIL-MAN']},
-    {t:'不合群但谁也不得罪',s:{fish:8,thick:5},tag:['LAO-TJ','NICE-GUY']},
-    {t:'谁爱合谁合关我屁事',s:{thick:10,toxic:8,lick:-10},tag:['GANG-J','DU-SHE']}
+  {q:'你的手机掉进了马桶里，你的反应？',dim:'d3',opts:[
+    {t:'冷静捞起来擦干，该修修该换换'},
+    {t:'难过一会儿，叹口气接受现实'},
+    {t:'崩溃大叫，但还是得捞'},
+    {t:'踢翻垃圾桶出气，怪东怪西'},
+    {t:'当场精神崩溃，觉得老天在针对你'}
   ]},
-  {q:'朋友问你借车：',opts:[
-    {t:'"开开开随便开"',s:{naive:12,thick:-5,lick:8},tag:['NICE-GUY','BIG-YUAN']},
-    {t:'"不好意思车刚送去保养"',s:{thick:10},tag:['OLD-OIL','OIL-MAN']},
-    {t:'"借可以油费你付"',s:{thick:8,toxic:5},tag:['SALE-GOD','GANG-J']},
-    {t:'直接已读不回',s:{thick:10,toxic:8,lick:-10},tag:['TOP-1','DU-SHE']}
+  {q:'堵车堵了一小时马上迟到了，你的状态？',dim:'d3',opts:[
+    {t:'听听音乐等着呗，急也没用'},
+    {t:'提前给公司/学校打电话说明情况'},
+    {t:'不停看手机+叹气，焦虑拉满'},
+    {t:'疯狂按喇叭+骂骂咧咧'},
+    {t:'直接路怒，恨不得把前面的车推走'}
   ]},
-  {q:'你的微信备注别人：',opts:[
-    {t:'全名+公司+职位',s:{oil:5,slave:8},tag:['SALE-GOD','996-ER']},
-    {t:'外号/绰号',s:{thick:5,toxic:5,oil:5},tag:['MU-JI','DU-SHE']},
-    {t:'从来不改备注',s:{fish:10,naive:5},tag:['LAO-TJ','FISH-GOD']},
-    {t:'"大冤种""提款机""渣男"',s:{toxic:10,thick:8},tag:['DU-SHE','GANG-J']}
+  {q:'你觉得自己运气怎么样？',dim:'d3',opts:[
+    {t:'超级好！感觉全世界都在帮我'},
+    {t:'还不错，虽然偶尔背时但总体很顺'},
+    {t:'一般般，好运和倒霉五五开'},
+    {t:'经常倒霉，喝水都塞牙'},
+    {t:'烂到离谱，如果有倒霉比赛我能拿冠军'}
   ]},
-  {q:'半夜睡不着因为：',opts:[
-    {t:'在想怎么赚更多钱',s:{money:5,slave:8,thick:3},tag:['996-ER','SALE-GOD']},
-    {t:'在翻喜欢的人的朋友圈',s:{lick:15,naive:8},tag:['LICK-DOG','DEEP-ER']},
-    {t:'在想今天丢脸的事',s:{naive:10,thick:-8,lick:5},tag:['BIG-YUAN','DEEP-ER']},
-    {t:'刷手机根本停不下来',s:{fish:10},tag:['FISH-GOD','MU-JI']}
+  {q:'连续加班一周后的周末，你的精神状态？',dim:'d3',opts:[
+    {t:'充电一天就满血复活了'},
+    {t:'好好休息，看个电影调整心态'},
+    {t:'躺尸两天啥也不想干'},
+    {t:'疯狂向身边人吐槽/发泄'},
+    {t:'觉得人生没意义，开始怀疑一切'}
   ]},
-  {q:'别人夸你"你人真好"：',opts:[
-    {t:'开心到飞起',s:{naive:12,lick:10},tag:['NICE-GUY','LICK-DOG']},
-    {t:'"可别了，好人没好报"',s:{thick:5,toxic:8},tag:['DU-SHE','OLD-OIL']},
-    {t:'"那当然，不看看我是谁"',s:{face:10,oil:8,thick:8},tag:['ZHUANG-B','TOP-1']},
-    {t:'"少给我灌迷魂汤"',s:{thick:10,toxic:8,lick:-8},tag:['GANG-J','TOP-1']}
+  {q:'突然被老板/老师公开批评了，你的第一反应？',dim:'d3',opts:[
+    {t:'虚心接受，回去反思改进'},
+    {t:'有点委屈但能消化，该改就改'},
+    {t:'表面点头，心里骂了八百遍'},
+    {t:'当场顶嘴："我不觉得我有错"'},
+    {t:'摔门就走，回去就写辞职信/退学申请'}
   ]},
-  {q:'最后一题——给自己一句话总结：',opts:[
-    {t:'我这个人吧，不装逼会死',s:{face:15,oil:8,thick:8},tag:['ZHUANG-B','OIL-MAN']},
-    {t:'我善良但不是好欺负的',s:{naive:10,thick:5,lick:5},tag:['NICE-GUY','DEEP-ER']},
-    {t:'我就想安安静静摸个鱼',s:{fish:15,slave:5},tag:['FISH-GOD','LAO-TJ']},
-    {t:'爱谁谁，老子就这样',s:{thick:12,toxic:10,lick:-10},tag:['GANG-J','TOP-1']}
+  {q:'你对未来的态度是？',dim:'d3',opts:[
+    {t:'充满期待！相信一切都会越来越好'},
+    {t:'平常心，脚踏实地过好每一天'},
+    {t:'顺其自然，想太多也没用'},
+    {t:'悲观焦虑，感觉未来一片灰暗'},
+    {t:'彻底摆烂，爱怎样怎样吧'}
+  ]},
+  {q:'最后一题——给自己的NPC人生打个分？',dim:'d3',opts:[
+    {t:'满分！我活得精彩极了'},
+    {t:'80分，虽然有缺点但总体及格'},
+    {t:'60分，将将过线吧'},
+    {t:'30分，一塌糊涂'},
+    {t:'负分！建议系统把我这号删了'}
   ]}
 ];
 
 /* ---------- 引擎 ---------- */
 var ans=[];
 function calc(){
-  var sc={};DIMS.forEach(function(d){sc[d.id]=50;});
-  var votes={};TYPES.forEach(function(t){votes[t.code]=0;});
+  var total=0;
+  var dimScores={d1:0,d2:0,d3:0};
+  var dimCounts={d1:0,d2:0,d3:0};
   ans.forEach(function(oi,qi){
     if(oi<0||qi>=QS.length)return;
-    var o=QS[qi].opts[oi];if(!o)return;
-    if(o.s){Object.keys(o.s).forEach(function(k){
-      if(sc[k]!==undefined) sc[k]=Math.max(0,Math.min(100,sc[k]+o.s[k]));
-    });}
-    if(o.tag){o.tag.forEach(function(c){
-      votes[c]=(votes[c]||0)+1;
-    });}
+    var pts=5-oi;
+    total+=pts;
+    var dm=QS[qi].dim;
+    dimScores[dm]+=pts;
+    dimCounts[dm]++;
   });
-  return{sc:sc,votes:votes};
+  return{total:total,dimScores:dimScores,dimCounts:dimCounts};
 }
-var TAG_MAX={};
-(function(){QS.forEach(function(q){q.opts.forEach(function(o){if(o.tag)o.tag.forEach(function(c){TAG_MAX[c]=(TAG_MAX[c]||0)+1;});});});})();
 function match(res){
-  var sc=res.sc,votes=res.votes;
-  var ranked=[];
-  TYPES.forEach(function(t,i){
-    var euc=0,wt=0;
-    DIMS.forEach(function(dm){
-      var sv=sc[dm.id]||50, tv=t.v[dm.id]||50;
-      var w=(tv>=80||tv<=20)?3:(tv>=65||tv<=35)?2:1;
-      euc+=w*(sv-tv)*(sv-tv); wt+=w;
-    });
-    var dimScore=1/(1+Math.sqrt(euc/wt));
-    var maxV=TAG_MAX[t.code]||1;
-    var voteScore=(votes[t.code]||0)/maxV;
-    var combo=dimScore*0.15+voteScore*0.85;
-    ranked.push({i:i,score:combo});
-  });
-  ranked.sort(function(a,b){return b.score-a.score;});
-  var best=TYPES[ranked[0].i];
-  var pct=Math.max(62,Math.min(96,Math.round(ranked[0].score*80+30)));
-  return{type:best,pct:pct};
+  var t=res.total;
+  for(var i=0;i<RANKS.length;i++){
+    if(t>=RANKS[i].min) return RANKS[i];
+  }
+  return RANKS[RANKS.length-1];
 }
 
 /* ---------- 页面切换 ---------- */
@@ -601,12 +507,20 @@ function show(id){
 /* ---------- 渲染题目 ---------- */
 function renderQ(){
   var el=document.getElementById('qlist');el.innerHTML='';ans=[];
+  var dimLabels={d1:'维度一 · 做人底线',d2:'维度二 · 社交段位',d3:'维度三 · 精神状态'};
+  var lastDim='';
   for(var i=0;i<QS.length;i++){
     ans.push(-1);var q=QS[i];
+    if(q.dim!==lastDim){
+      var sec=document.createElement('div');
+      sec.innerHTML='<span class="dim-section-title">'+dimLabels[q.dim]+'</span>';
+      el.appendChild(sec);
+      lastDim=q.dim;
+    }
     var d=document.createElement('div');d.className='question';d.id='qc'+i;
-    var h='<div class="question-meta"><span class="badge">Q'+(i+1)+' / 30</span></div>';
+    var h='<div class="question-meta"><span class="badge">Q'+(i+1)+' / 31</span></div>';
     h+='<div class="question-title">'+q.q+'</div><div class="options">';
-    var L=['A','B','C','D'];
+    var L=['A','B','C','D','E'];
     for(var j=0;j<q.opts.length;j++){
       h+='<div class="option" data-q="'+i+'" data-o="'+j+'" onclick="pick(this)">';
       h+='<span class="ol">'+L[j]+'</span><span>'+q.opts[j].t+'</span></div>';
@@ -627,7 +541,7 @@ function pick(el){
   upd();
   if(ans.every(function(a){return a>=0;})){
     document.getElementById('submitBtn').disabled=false;
-    document.getElementById('qhint').textContent='全部答完了！来，让系统看看你到底是什么货色。';
+    document.getElementById('qhint').textContent='全部答完了！来，让系统看看你到底什么段位。';
   }
 }
 function upd(){
@@ -638,38 +552,47 @@ function upd(){
 }
 
 /* ---------- 结果渲染 ---------- */
+var _lastResult=null;
 function showResult(){
-  var res=calc(),m=match(res),t=m.type,sc=res.sc;
-  _lastResult={type:t,pct:m.pct,sc:sc};
+  var res=calc(),rank=match(res);
+  var ds=res.dimScores,dc=res.dimCounts;
+  _lastResult={rank:rank,total:res.total,ds:ds,dc:dc};
+
   var el=document.getElementById('rlayout');
   var h='<div class="result-top">';
-  h+='<div class="poster-box rbox"><span class="poster-emoji">'+t.emoji+'</span>';
-  h+='<div class="poster-caption">'+t.intro+'</div></div>';
-  h+='<div class="type-box rbox"><div class="type-kicker">你的NPC属性</div>';
-  h+='<div class="type-name">'+t.code+'（'+t.cn+'）</div>';
-  h+='<div class="match">匹配度 '+m.pct+'%</div>';
-  h+='<div class="type-subname">系统备注：建议本人照照镜子。</div></div></div>';
+  h+='<div class="poster-box rbox"><span class="poster-emoji">'+rank.emoji+'</span>';
+  h+='<div class="poster-caption">'+rank.sub+'</div></div>';
+  h+='<div class="type-box rbox"><div class="type-kicker">你的NPC段位</div>';
+  h+='<div class="type-name">'+rank.title+'</div>';
+  h+='<div class="match">总分 '+res.total+' / 155</div>';
+  h+='<div class="type-subname">分数范围：'+rank.min+'–'+rank.max+'分</div></div></div>';
 
-  h+='<div class="rbox"><h3>该人格的精神状态解读</h3><p>'+t.desc+'</p>';
+  h+='<div class="rbox"><h3>段位详细解读</h3><p>'+rank.desc+'</p>';
   h+='<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px">';
-  t.traits.forEach(function(tr){
+  rank.traits.forEach(function(tr){
     h+='<span style="padding:6px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--accent-strong)">'+tr+'</span>';
   });
   h+='</div></div>';
 
-  h+='<div class="rbox"><h3>九维度属性面板</h3><div class="dim-list">';
-  DIMS.forEach(function(d){
-    var v=Math.max(0,Math.min(100,sc[d.id]||50));
+  h+='<div class="rbox"><h3>三维度得分面板</h3><div class="dim-list">';
+  var dimMeta=[
+    {id:'d1',name:'做人底线',lo:'人间毒瘤',hi:'人间清醒',max:50},
+    {id:'d2',name:'社交段位',lo:'社恐到爆',hi:'万人迷',max:50},
+    {id:'d3',name:'精神状态',lo:'随时爆炸',hi:'心态大师',max:55}
+  ];
+  dimMeta.forEach(function(d){
+    var v=ds[d.id]||0;
+    var pct=Math.round(v/d.max*100);
     h+='<div class="dim-item"><div class="dim-item-top">';
     h+='<span class="dim-item-name">'+d.name+'</span>';
-    h+='<span class="dim-item-score">'+v+' / 100</span></div>';
+    h+='<span class="dim-item-score">'+v+' / '+d.max+'</span></div>';
     h+='<div class="dim-item-hint"><span>'+d.lo+'</span><span>'+d.hi+'</span></div>';
-    h+='<div class="dim-bar"><span style="width:'+v+'%"></span></div></div>';
+    h+='<div class="dim-bar"><span style="width:'+pct+'%"></span></div></div>';
   });
   h+='</div></div>';
 
   h+='<div class="rbox note-box"><h3>友情提示</h3>';
-  h+='<p>本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、算命或人生判决书。<br>但如果你觉得准——说明你确实是这种人，别挣扎了。</p></div>';
+  h+='<p>本测试纯属娱乐，别拿它当人生判决书。<br>但如果你的分低到离谱……建议照照镜子反思一下。</p></div>';
 
   h+='<div style="margin-top:20px;padding:18px 20px;background:#f5f9f6;border-radius:16px;border:1px solid var(--line);text-align:center;line-height:2.2;font-size:13px;color:var(--muted)">';
   h+='<div style="font-weight:700;color:var(--accent-strong);font-size:14px;margin-bottom:4px">NBTI · NPC Behavioral Type Indicator</div>';
@@ -683,10 +606,9 @@ function showResult(){
 }
 
 /* ---------- 海报生成 ---------- */
-var _lastResult=null;
 function genPoster(){
   if(!_lastResult)return;
-  var t=_lastResult.type, pct=_lastResult.pct, sc=_lastResult.sc;
+  var r=_lastResult.rank, total=_lastResult.total, ds=_lastResult.ds;
   var W=750, H=1334;
   var cvs=document.getElementById('posterCanvas');
   cvs.width=W; cvs.height=H;
@@ -700,80 +622,82 @@ function genPoster(){
   ctx.strokeStyle='#d0ddd3'; ctx.lineWidth=1.5; roundRect(ctx,40,40,W-80,H-80,24); ctx.stroke();
 
   ctx.fillStyle='#2d3a30'; ctx.font='bold 28px system-ui,sans-serif';
-  ctx.textAlign='center'; ctx.fillText('NBTI · NPC人格鉴定',W/2,110);
+  ctx.textAlign='center'; ctx.fillText('NBTI · NPC段位鉴定',W/2,110);
 
   ctx.fillStyle='#8a9e8f'; ctx.font='16px system-ui,sans-serif';
-  ctx.fillText('哦？SBTI都来了，那我的NBTI呢？',W/2,145);
+  ctx.fillText('31道灵魂拷问 · ABCDE五档鉴定',W/2,145);
 
   ctx.save();
   ctx.beginPath(); ctx.arc(W/2,260,70,0,Math.PI*2); ctx.closePath();
   ctx.fillStyle='#e8f0e9'; ctx.fill();
   ctx.strokeStyle='#5b7a62'; ctx.lineWidth=3; ctx.stroke();
   ctx.font='72px system-ui,sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
-  ctx.fillStyle='#000'; ctx.fillText(t.emoji,W/2,265);
+  ctx.fillStyle='#000'; ctx.fillText(r.emoji,W/2,265);
   ctx.restore();
 
-  ctx.fillStyle='#1e2a22'; ctx.font='bold 42px system-ui,sans-serif';
-  ctx.textAlign='center'; ctx.fillText(t.cn,W/2,380);
+  ctx.fillStyle='#1e2a22'; ctx.font='bold 32px system-ui,sans-serif';
+  ctx.textAlign='center';
+  var titleLines=wrapText(ctx,r.title,W-160);
+  var ty=370;
+  titleLines.forEach(function(ln){ctx.fillText(ln,W/2,ty);ty+=40;});
 
-  ctx.fillStyle='#5b7a62'; ctx.font='bold 22px system-ui,sans-serif';
-  ctx.fillText(t.code,W/2,415);
-
-  roundRect(ctx,W/2-90,440,180,44,22);
+  roundRect(ctx,W/2-100,ty+10,200,44,22);
   ctx.fillStyle='#edf5ee'; ctx.fill();
-  ctx.strokeStyle='#b8d8ba'; ctx.lineWidth=1; roundRect(ctx,W/2-90,440,180,44,22); ctx.stroke();
+  ctx.strokeStyle='#b8d8ba'; ctx.lineWidth=1; roundRect(ctx,W/2-100,ty+10,200,44,22); ctx.stroke();
   ctx.fillStyle='#3d5a44'; ctx.font='bold 18px system-ui,sans-serif';
-  ctx.fillText('匹配度 '+pct+'%',W/2,468);
+  ctx.fillText('总分 '+total+' / 155',W/2,ty+38);
 
-  ctx.textAlign='left'; ctx.font='16px system-ui,sans-serif'; ctx.fillStyle='#5a6b5e';
-  var introLines=wrapText(ctx,'"'+t.intro+'"',W-160);
-  var iy=520;
-  ctx.font='italic 16px system-ui,sans-serif'; ctx.fillStyle='#7a8e7f'; ctx.textAlign='center';
-  introLines.forEach(function(ln){ctx.fillText(ln,W/2,iy);iy+=24;});
+  ctx.font='italic 15px system-ui,sans-serif'; ctx.fillStyle='#7a8e7f';
+  ctx.fillText('"'+r.sub+'"',W/2,ty+90);
 
-  var dimY=iy+30;
+  var dimY=ty+130;
   ctx.textAlign='left';
   ctx.fillStyle='#3d5a44'; ctx.font='bold 18px system-ui,sans-serif';
-  ctx.fillText('九维度属性',80,dimY); dimY+=12;
+  ctx.fillText('三维度得分',80,dimY); dimY+=12;
 
-  var barW=540, barH=14, barX=130;
-  DIMS.forEach(function(d){
-    dimY+=30;
-    var v=Math.max(0,Math.min(100,sc[d.id]||50));
-    ctx.fillStyle='#4a5e4e'; ctx.font='14px system-ui,sans-serif'; ctx.textAlign='right';
-    ctx.fillText(d.name,barX-10,dimY+4);
-    roundRect(ctx,barX,dimY-6,barW,barH,7);
+  var dimMeta=[
+    {id:'d1',name:'做人底线',max:50},
+    {id:'d2',name:'社交段位',max:50},
+    {id:'d3',name:'精神状态',max:55}
+  ];
+  var barW=440, barH=16, barX=180;
+  dimMeta.forEach(function(d){
+    dimY+=36;
+    var v=ds[d.id]||0;
+    var pct=v/d.max;
+    ctx.fillStyle='#4a5e4e'; ctx.font='bold 15px system-ui,sans-serif'; ctx.textAlign='right';
+    ctx.fillText(d.name,barX-14,dimY+5);
+    roundRect(ctx,barX,dimY-8,barW,barH,8);
     ctx.fillStyle='#edf3ee'; ctx.fill();
-    var fillW=Math.max(barH,barW*v/100);
-    roundRect(ctx,barX,dimY-6,fillW,barH,7);
+    var fillW=Math.max(barH,barW*pct);
+    roundRect(ctx,barX,dimY-8,fillW,barH,8);
     var bGrd=ctx.createLinearGradient(barX,0,barX+fillW,0);
     bGrd.addColorStop(0,'#97b59c'); bGrd.addColorStop(1,'#5b7a62');
     ctx.fillStyle=bGrd; ctx.fill();
-    ctx.fillStyle='#5b7a62'; ctx.font='bold 13px system-ui,sans-serif'; ctx.textAlign='left';
-    ctx.fillText(v,barX+barW+8,dimY+4);
+    ctx.fillStyle='#5b7a62'; ctx.font='bold 14px system-ui,sans-serif'; ctx.textAlign='left';
+    ctx.fillText(v+'/'+d.max,barX+barW+10,dimY+5);
   });
 
-  var tagY=dimY+45;
+  var tagY=dimY+50;
   ctx.textAlign='center';
   var tagsPerRow=2, tagGap=12, tagH=34;
   var totalTagW=W-160;
   var singleTagW=(totalTagW-tagGap*(tagsPerRow-1))/tagsPerRow;
-  t.traits.forEach(function(tr,i){
+  r.traits.forEach(function(tr,i){
     var row=Math.floor(i/tagsPerRow), col=i%tagsPerRow;
     var tx=80+col*(singleTagW+tagGap);
-    var ty=tagY+row*(tagH+10);
-    roundRect(ctx,tx,ty,singleTagW,tagH,17);
+    var tty=tagY+row*(tagH+10);
+    roundRect(ctx,tx,tty,singleTagW,tagH,17);
     ctx.fillStyle='#edf5ee'; ctx.fill();
-    ctx.strokeStyle='#c5ddc8'; ctx.lineWidth=1; roundRect(ctx,tx,ty,singleTagW,tagH,17); ctx.stroke();
+    ctx.strokeStyle='#c5ddc8'; ctx.lineWidth=1; roundRect(ctx,tx,tty,singleTagW,tagH,17); ctx.stroke();
     ctx.fillStyle='#3d5a44'; ctx.font='bold 13px system-ui,sans-serif';
-    ctx.fillText(tr,tx+singleTagW/2,ty+22);
+    ctx.fillText(tr,tx+singleTagW/2,tty+22);
   });
 
   var footY=H-120;
   ctx.fillStyle='#c5ddc8'; ctx.fillRect(80,footY,W-160,1);
-
   ctx.fillStyle='#8a9e8f'; ctx.font='14px system-ui,sans-serif'; ctx.textAlign='center';
-  ctx.fillText('扫码或访问测你的NPC属性',W/2,footY+30);
+  ctx.fillText('扫码或访问测你的NPC段位',W/2,footY+30);
   ctx.fillStyle='#5b7a62'; ctx.font='bold 16px system-ui,sans-serif';
   ctx.fillText('nbti.coco.dev',W/2,footY+56);
   ctx.fillStyle='#b0c4b4'; ctx.font='12px system-ui,sans-serif';
