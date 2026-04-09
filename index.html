@@ -117,12 +117,31 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 <!-- ===== HOME ===== -->
 <section id="intro" class="screen active">
   <div class="hero card">
+    <div class="ip">
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="65" r="45" fill="#b8d8ba" stroke="#5b7a62" stroke-width="2.5"/>
+        <ellipse cx="60" cy="112" rx="28" ry="5" fill="rgba(91,122,98,.08)"/>
+        <circle cx="44" cy="55" r="8" fill="#fff" stroke="#5b7a62" stroke-width="2"/>
+        <circle cx="76" cy="55" r="8" fill="#fff" stroke="#5b7a62" stroke-width="2"/>
+        <circle cx="46" cy="54" r="3.5" fill="#1e2a22"/>
+        <circle cx="78" cy="54" r="3.5" fill="#1e2a22"/>
+        <circle cx="47.5" cy="52.5" r="1.2" fill="#fff"/>
+        <circle cx="79.5" cy="52.5" r="1.2" fill="#fff"/>
+        <path d="M50 74 Q60 83 70 74" stroke="#5b7a62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <ellipse cx="36" cy="68" rx="5" ry="3" fill="#e8a0a0" opacity=".45"/>
+        <ellipse cx="84" cy="68" rx="5" ry="3" fill="#e8a0a0" opacity=".45"/>
+        <path d="M37 30 Q41 18 49 28" stroke="#5b7a62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M83 30 Q79 18 71 28" stroke="#5b7a62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle cx="49" cy="26" r="3" fill="#ffd93d"/>
+        <circle cx="71" cy="26" r="3" fill="#ffd93d"/>
+      </svg>
+    </div>
     <h1>哦？SBTI都来了，<br>那我的<em>NBTI</em>呢？</h1>
     <div class="hero-actions">
       <button class="btn-primary" id="startBtn">开始鉴定</button>
     </div>
     <div class="hero-footer">
-      <span>原作者：&ensp;<a href="javascript:void(0)">DOU音@费率</a></span>
+      <span>原作者：&ensp;<a href="https://www.douyin.com/user/MS4wLjABAAAAplaceholder" target="_blank" style="color:#1e80ff;text-decoration:none;font-weight:600">DOU音@羊肉蛋汤</a></span>
       <span>托管：Cloudflare (免费)</span>
       <span>域名：spansoda.cn (自费)</span>
     </div>
@@ -205,7 +224,7 @@ var TYPES=[
     intro:'不装了，摊牌了，我就是比你们都强。',
     desc:'恭喜你解锁了全网最稀有的人格。你不是在装逼，你只是在陈述事实——虽然事实有时候被你美化了亿点点。你的朋友圈是精心策划的个人纪录片，你的口头禅是"这个我之前就知道了"。你不允许自己在任何领域输给任何人，哪怕是一个你完全不懂的领域。',
     traits:['#朋友圈导演','#凡尔赛本赛','#我早就知道了','#气场两米八'],
-    v:{face:98,money:50,oil:50,slave:20,naive:5,fish:15,thick:75,toxic:40,lick:5}
+    v:{face:98,money:45,oil:45,slave:15,naive:5,fish:10,thick:65,toxic:35,lick:5}
   },
   {
     code:'PAY-ALL',cn:'败家子',emoji:'💸',
@@ -226,7 +245,7 @@ var TYPES=[
     intro:'打工打工，打到最后只剩个工。',
     desc:'你的人生简历可以用四个字概括——一直在忙。你不是在加班就是在去加班的路上，周末是用来补觉的，假期是用来赶项目的。你已经分不清工作和生活的边界了，因为你根本没有生活。你的微信步数全是从工位到厕所再回来。',
     traits:['#永远在忙','#工位钉子户','#周末是什么','#社畜天花板'],
-    v:{face:5,money:10,oil:5,slave:98,naive:40,fish:2,thick:15,toxic:10,lick:25}
+    v:{face:5,money:10,oil:5,slave:98,naive:35,fish:2,thick:20,toxic:15,lick:20}
   },
   {
     code:'BIG-YUAN',cn:'大冤种',emoji:'🤡',
@@ -254,63 +273,63 @@ var TYPES=[
     intro:'年轻人，你这个套路我十年前就玩过了。',
     desc:'你是职场里的终极生存者，什么大风大浪没见过。你永远知道该说什么不该说什么，该做什么不该做什么。你从不站队但又和所有人保持关系，你从不加班但绩效从来不低。新人看你觉得你在摆烂，老板看你觉得你靠谱得很。',
     traits:['#职场生存指南','#从不背锅','#永远不站队','#看破不说破'],
-    v:{face:35,money:20,oil:30,slave:40,naive:2,fish:75,thick:70,toxic:35,lick:5}
+    v:{face:40,money:25,oil:35,slave:50,naive:2,fish:65,thick:60,toxic:30,lick:5}
   },
   {
     code:'TOP-1',cn:'天花板',emoji:'👑',
     intro:'不好意思，你们的天花板就是我的地板。',
     desc:'你在任何领域都习惯性地做到最好——不是因为你有多努力，而是因为你觉得做不到第一是一种耻辱。你的存在让周围人又崇拜又嫉妒，你的随便一句话都能让人记半年。你不是在凡尔赛，你是真的强。问题是：你什么时候能学会收着点？',
     traits:['#遥遥领先','#别人的天花板','#低调不了一点','#随便做做就第一'],
-    v:{face:85,money:40,oil:25,slave:35,naive:2,fish:5,thick:50,toxic:45,lick:2}
+    v:{face:90,money:50,oil:30,slave:30,naive:2,fish:5,thick:45,toxic:40,lick:2}
   },
   {
     code:'GANG-J',cn:'杠精',emoji:'⚔️',
     intro:'你说的对，但是我不同意。',
     desc:'你的嘴里永远有一个"但是"在等着。别人说太阳是圆的你要杠，说水是湿的你也要杠，说今天是星期三你还是要杠。你不是为了证明什么，你只是觉得不反驳一下浑身难受。你的微信群里永远有人想踢你但又舍不得——因为你杠得确实有道理。',
     traits:['#但是战士','#逢人必杠','#杠出真理','#嘴巴是最强武器'],
-    v:{face:20,money:10,oil:15,slave:15,naive:5,fish:20,thick:85,toxic:98,lick:2}
+    v:{face:25,money:15,oil:10,slave:20,naive:5,fish:15,thick:80,toxic:98,lick:2}
   },
   {
     code:'LICK-DOG',cn:'死舔狗',emoji:'🐶',
     intro:'你回个消息我能开心一整天。',
     desc:'你把卑微这件事做到了极致。对方说一句"嗯"你能分析出十七种情绪；对方说"在忙"你立马道歉"打扰了"；对方朋友圈发了张图你能写出800字小作文。你不是在谈恋爱，你是在进行一场漫长的单方面供养。最可悲的是——你自己也知道，但就是停不下来。',
     traits:['#已读不回分析师','#早安晚安机器','#备胎中的战斗机','#舔到失联'],
-    v:{face:5,money:30,oil:45,slave:20,naive:75,fish:5,thick:2,toxic:2,lick:98}
+    v:{face:10,money:35,oil:50,slave:25,naive:70,fish:8,thick:5,toxic:2,lick:98}
   },
   {
     code:'LAO-TJ',cn:'老太监',emoji:'🫥',
     intro:'我没意见，你们开心就好。',
     desc:'你已经把"无欲无求"这四个字刻进了DNA。什么事都行，什么饭都吃，什么班都上，什么委屈都受。你不是没脾气，你是觉得有脾气太累了。你的口头禅是"都行""随便""你定"，你把自己活成了一个人形背景板。你以为这叫佛系，其实这叫——精神太监。',
     traits:['#随便教主','#都行大师','#人形背景板','#情绪已阉割'],
-    v:{face:2,money:10,oil:5,slave:40,naive:40,fish:70,thick:10,toxic:2,lick:30}
+    v:{face:2,money:12,oil:5,slave:45,naive:35,fish:60,thick:12,toxic:2,lick:25}
   },
   {
     code:'DU-SHE',cn:'毒舌妇',emoji:'🐍',
     intro:'我说话难听？那是因为事实难听。',
     desc:'你的嘴开过光——是往毒的方向开的。你能用一句话让人笑着笑着就哭了，能用一条评论让发帖的人想注销账号。你不是故意的，你只是没有那个"话到嘴边留三分"的过滤器。朋友们又爱又怕你：爱你的真实，怕你的嘴巴。',
     traits:['#嘴里淬了毒','#一句话暴击','#真实到残忍','#毒舌但真诚'],
-    v:{face:25,money:15,oil:10,slave:20,naive:5,fish:25,thick:80,toxic:98,lick:2}
+    v:{face:30,money:20,oil:15,slave:25,naive:8,fish:30,thick:75,toxic:95,lick:2}
   },
   {
     code:'MA-PI',cn:'马屁精',emoji:'🐴',
     intro:'领导你今天气色真好！（背后翻白眼）',
     desc:'你是职场里的人际关系天花板——往上管理。你能在0.5秒内读懂领导的微表情，然后精准输出一句让领导心花怒放的彩虹屁。你不觉得这叫拍马屁，你管这叫"向上沟通能力"。同事们背后说你是戏精，但年终奖下来的时候——真香。',
     traits:['#彩虹屁大师','#向上管理','#读心术一级','#年终奖收割机'],
-    v:{face:25,money:20,oil:40,slave:55,naive:10,fish:25,thick:75,toxic:5,lick:85}
+    v:{face:20,money:15,oil:35,slave:55,naive:5,fish:20,thick:80,toxic:5,lick:90}
   },
   {
     code:'MU-JI',cn:'母鸡鸭',emoji:'🐔',
     intro:'你这样不行的你听我说你得这样！',
     desc:'你操的心比居委会大妈还多。朋友吃什么穿什么你管，同事工作怎么做你管，路边陌生人带没带伞你都想管。你把全世界当成了你的养殖场，所有人都是你要照顾的小鸡仔。别人没问你意见你也要给，给完还要追问"你听了没有？"',
     traits:['#操心命','#居委会体质','#你听我说','#大家长本大家长'],
-    v:{face:20,money:25,oil:35,slave:40,naive:35,fish:2,thick:50,toxic:55,lick:30}
+    v:{face:15,money:20,oil:30,slave:35,naive:30,fish:2,thick:55,toxic:60,lick:25}
   },
   {
     code:'NICE-GUY',cn:'老好人',emoji:'😇',
     intro:'没事，我不介意的，真的。',
     desc:'你把"好人"这个角色演到了无法自拔的地步。所有人的忙你都帮、所有人的约你都赴、所有人的要求你都答应。你最怕的事情是别人不开心，哪怕那个"别人"根本不在乎你。你笑着说的每一句"没事"背后，都藏着一个默默受委屈的灵魂。',
     traits:['#没事本没事','#来者不拒','#受委屈大师','#好人卡满级'],
-    v:{face:5,money:25,oil:10,slave:35,naive:80,fish:8,thick:2,toxic:2,lick:60}
+    v:{face:5,money:20,oil:10,slave:30,naive:85,fish:5,thick:2,toxic:2,lick:55}
   },
   {
     code:'SALE-GOD',cn:'销冠哥',emoji:'💰',
@@ -331,221 +350,232 @@ var TYPES=[
     intro:'我爱过，真的爱过，只是没人信。',
     desc:'你把自己活成了一首行走的伤感情歌。你的朋友圈永远是深夜的感悟和模糊的背影，你的歌单全是"我们再也回不去了"。你觉得自己是这座城市最深情的人，但事实是——你上一段感情结束不到两周你就开始深情下一个了。你爱的不是某个人，你爱的是"深情"这件事本身。',
     traits:['#深夜感悟大师','#朋友圈伤感诗人','#换人不换人设','#深情是表演'],
-    v:{face:30,money:25,oil:40,slave:15,naive:50,fish:20,thick:20,toxic:5,lick:92}
+    v:{face:25,money:20,oil:35,slave:10,naive:55,fish:15,thick:15,toxic:5,lick:95}
   }
 ];
 
-/* ---------- 30道题 ---------- */
+/* ---------- 30道题（每选项直投2个人格+维度分） ---------- */
 var QS=[
   {q:'周五晚上，群聊炸了——"今晚出来嗨！"',opts:[
-    {t:'秒回"来了"，顺便把酒吧订了',s:{face:8,money:10,oil:5,slave:-5,naive:3,fish:-8,thick:5,toxic:-3,lick:-3}},
-    {t:'先看看谁请客再决定去不去',s:{face:-3,money:-8,oil:-3,slave:5,naive:-5,fish:5,thick:8,toxic:3,lick:-5}},
-    {t:'"在忙"（其实在家刷手机）',s:{face:-5,money:-3,oil:-5,slave:3,naive:-3,fish:12,thick:3,toxic:-5,lick:-5}},
-    {t:'已读不回，第二天说手机没电',s:{face:-5,money:-3,oil:-5,slave:-3,naive:-3,fish:8,thick:10,toxic:5,lick:-8}}
+    {t:'秒回"来了"，顺便把酒吧订了',s:{face:8,money:10,oil:5},tag:['PAY-ALL','RICH-ER']},
+    {t:'先看看谁请客再决定去不去',s:{face:-3,money:-5,oil:-3,thick:8},tag:['OLD-OIL','SALE-GOD']},
+    {t:'"在忙"（其实在家刷手机）',s:{fish:12,thick:3},tag:['FISH-GOD','LAO-TJ']},
+    {t:'已读不回，第二天说手机没电',s:{fish:8,thick:10,toxic:5},tag:['GANG-J','DU-SHE']}
   ]},
   {q:'新出了一双限量球鞋，你：',opts:[
-    {t:'不管好不好看先抢了再说',s:{face:5,money:12,oil:3,slave:-3,naive:8,fish:-5,thick:3,toxic:-3,lick:-3}},
-    {t:'看看高仿的能不能以假乱真',s:{face:5,money:-8,oil:-3,slave:3,naive:-3,fish:3,thick:8,toxic:-3,lick:-3}},
-    {t:'球鞋？我还在穿前年的',s:{face:-8,money:-10,oil:-5,slave:8,naive:3,fish:5,thick:-3,toxic:-3,lick:-3}},
-    {t:'买完立刻发朋友圈',s:{face:12,money:8,oil:8,slave:-5,naive:3,fish:-5,thick:3,toxic:-3,lick:-3}}
+    {t:'不管好不好看先抢了再说',s:{money:12,naive:8,face:5},tag:['PAY-ALL','BIG-YUAN']},
+    {t:'看看高仿的能不能以假乱真',s:{face:5,thick:8,money:-5},tag:['ZHUANG-B','POOR-G']},
+    {t:'球鞋？我还在穿前年的',s:{money:-10,slave:8},tag:['POOR-G','996-ER']},
+    {t:'买完立刻发朋友圈',s:{face:12,oil:8,money:8},tag:['ZHUANG-B','RICH-ER']}
   ]},
   {q:'有人当面阴阳怪气你一句：',opts:[
-    {t:'当场怼回去，而且怼得更狠',s:{face:3,money:-3,oil:-5,slave:-3,naive:-8,fish:-3,thick:8,toxic:12,lick:-10}},
-    {t:'表面微笑，内心骂了800遍',s:{face:-3,money:-3,oil:5,slave:5,naive:3,fish:3,thick:-5,toxic:3,lick:5}},
-    {t:'"哈哈是吗"然后装没听懂',s:{face:-3,money:-3,oil:-3,slave:-3,naive:-3,fish:8,thick:8,toxic:-5,lick:-3}},
-    {t:'回家越想越气凌晨还在想',s:{face:-5,money:-3,oil:-3,slave:3,naive:10,fish:-3,thick:-8,toxic:-5,lick:8}}
+    {t:'当场怼回去，而且怼得更狠',s:{toxic:12,thick:8,naive:-8},tag:['GANG-J','DU-SHE']},
+    {t:'表面微笑，内心骂了800遍',s:{oil:5,slave:5,lick:5},tag:['OLD-OIL','NICE-GUY']},
+    {t:'"哈哈是吗"然后装没听懂',s:{fish:8,thick:8},tag:['LAO-TJ','FISH-GOD']},
+    {t:'回家越想越气凌晨还在想',s:{naive:10,thick:-8,lick:8},tag:['BIG-YUAN','DEEP-ER']}
   ]},
   {q:'领导在群里@你"明天加班"，你：',opts:[
-    {t:'"好的领导！"（秒回+微笑表情）',s:{face:-5,money:-3,oil:5,slave:12,naive:5,fish:-8,thick:-3,toxic:-5,lick:10}},
-    {t:'假装没看到，等别人先回复',s:{face:-3,money:-3,oil:-3,slave:5,naive:-3,fish:12,thick:5,toxic:-3,lick:-3}},
-    {t:'"领导，加班有加班费吗？"',s:{face:-3,money:3,oil:-5,slave:-5,naive:-5,fish:-3,thick:12,toxic:8,lick:-5}},
-    {t:'已经在想明天怎么请假了',s:{face:-3,money:-3,oil:-3,slave:-5,naive:-3,fish:12,thick:8,toxic:3,lick:-5}}
+    {t:'"好的领导！"（秒回+微笑表情）',s:{slave:12,oil:5,lick:10},tag:['MA-PI','996-ER']},
+    {t:'假装没看到，等别人先回复',s:{fish:12,thick:5},tag:['FISH-GOD','LAO-TJ']},
+    {t:'"领导，加班有加班费吗？"',s:{thick:12,toxic:8},tag:['GANG-J','TOP-1']},
+    {t:'已经在想明天怎么请假了',s:{fish:12,thick:8,oil:-3},tag:['FISH-GOD','OLD-OIL']}
   ]},
   {q:'朋友借你500块说下周还：',opts:[
-    {t:'"好的没问题"（内心已经当送了）',s:{face:-5,money:5,oil:-3,slave:-3,naive:12,fish:-3,thick:-8,toxic:-5,lick:8}},
-    {t:'"可以，到时候记得转我"',s:{face:-3,money:-3,oil:-3,slave:3,naive:-5,fish:-3,thick:5,toxic:3,lick:-3}},
-    {t:'"刚好我也没钱"（其实有）',s:{face:-3,money:-8,oil:-3,slave:3,naive:-8,fish:5,thick:10,toxic:3,lick:-5}},
-    {t:'"借钱免谈，请吃饭可以"',s:{face:5,money:3,oil:-3,slave:-3,naive:-5,fish:-3,thick:8,toxic:5,lick:-5}}
+    {t:'"好的没问题"（内心已经当送了）',s:{naive:12,thick:-8,lick:8},tag:['NICE-GUY','LICK-DOG']},
+    {t:'"可以，到时候记得转我"',s:{thick:5,toxic:3},tag:['TOP-1','SALE-GOD']},
+    {t:'"刚好我也没钱"（其实有）',s:{thick:10,money:-8},tag:['POOR-G','OLD-OIL']},
+    {t:'"借钱免谈，请吃饭可以"',s:{thick:8,toxic:5,face:5},tag:['GANG-J','ZHUANG-B']}
   ]},
   {q:'你的朋友圈日常：',opts:[
-    {t:'精修自拍+高端场所定位',s:{face:12,money:5,oil:10,slave:-5,naive:-3,fish:-5,thick:3,toxic:-3,lick:-3}},
-    {t:'三天可见/仅自己可见',s:{face:-5,money:-3,oil:-5,slave:-3,naive:-3,fish:8,thick:-3,toxic:-3,lick:-5}},
-    {t:'转发各种砍一刀/投票链接',s:{face:-8,money:-3,oil:-3,slave:3,naive:10,fish:3,thick:5,toxic:-3,lick:5}},
-    {t:'只发工作相关（被迫营业）',s:{face:-5,money:-3,oil:-3,slave:12,naive:3,fish:-5,thick:-3,toxic:-3,lick:3}}
+    {t:'精修自拍+高端场所定位',s:{face:12,oil:10},tag:['ZHUANG-B','RICH-ER']},
+    {t:'三天可见/仅自己可见',s:{fish:8},tag:['LAO-TJ','FISH-GOD']},
+    {t:'转发各种砍一刀/投票链接',s:{naive:10,lick:5},tag:['BIG-YUAN','MU-JI']},
+    {t:'只发工作相关（被迫营业）',s:{slave:12},tag:['996-ER','MA-PI']}
   ]},
   {q:'在一个全是陌生人的饭局上：',opts:[
-    {t:'主动敬酒认识全场',s:{face:8,money:3,oil:10,slave:-3,naive:-3,fish:-5,thick:8,toxic:-3,lick:3}},
-    {t:'找个角落坐下默默吃饭',s:{face:-8,money:-3,oil:-8,slave:3,naive:3,fish:10,thick:-5,toxic:-5,lick:-5}},
-    {t:'全程吐槽这个饭局',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-5,fish:3,thick:8,toxic:12,lick:-5}},
-    {t:'疯狂夸菜好吃夸人好看',s:{face:-3,money:-3,oil:8,slave:3,naive:5,fish:-3,thick:3,toxic:-5,lick:10}}
+    {t:'主动敬酒认识全场',s:{oil:10,face:8,thick:8},tag:['SALE-GOD','ZHUANG-B']},
+    {t:'找个角落坐下默默吃饭',s:{fish:10},tag:['LAO-TJ','NICE-GUY']},
+    {t:'全程吐槽这个饭局',s:{toxic:12,thick:8},tag:['DU-SHE','GANG-J']},
+    {t:'疯狂夸菜好吃夸人好看',s:{oil:8,lick:10},tag:['MA-PI','LICK-DOG']}
   ]},
   {q:'路上捡到100块钱：',opts:[
-    {t:'二话不说塞兜里',s:{face:-3,money:5,oil:-3,slave:-3,naive:-5,fish:3,thick:8,toxic:3,lick:-5}},
-    {t:'发朋友圈"今天运气不错"',s:{face:10,money:3,oil:8,slave:-5,naive:3,fish:-3,thick:3,toxic:-3,lick:-3}},
-    {t:'交给警察叔叔',s:{face:-5,money:-3,oil:-5,slave:3,naive:12,fish:-3,thick:-8,toxic:-5,lick:5}},
-    {t:'请旁边的朋友喝奶茶',s:{face:3,money:8,oil:3,slave:-3,naive:5,fish:-3,thick:-3,toxic:-3,lick:5}}
+    {t:'二话不说塞兜里',s:{thick:8,money:5},tag:['OLD-OIL','POOR-G']},
+    {t:'发朋友圈"今天运气不错"',s:{face:10,oil:8},tag:['ZHUANG-B','SALE-GOD']},
+    {t:'交给警察叔叔',s:{naive:12,thick:-8},tag:['NICE-GUY','BIG-YUAN']},
+    {t:'请旁边的朋友喝奶茶',s:{money:8,naive:5,lick:5},tag:['PAY-ALL','DEEP-ER']}
   ]},
   {q:'你最讨厌的一句话：',opts:[
-    {t:'"你能不能便宜点"',s:{face:10,money:5,oil:3,slave:-3,naive:-5,fish:-3,thick:5,toxic:3,lick:-5}},
-    {t:'"你怎么又在摸鱼"',s:{face:-5,money:-3,oil:-3,slave:5,naive:3,fish:12,thick:3,toxic:-3,lick:-3}},
-    {t:'"你脾气太好了吧"',s:{face:-5,money:-3,oil:-3,slave:3,naive:10,fish:-3,thick:-5,toxic:-5,lick:8}},
-    {t:'"你这个人太假了"',s:{face:3,money:-3,oil:8,slave:-3,naive:-3,fish:-3,thick:5,toxic:3,lick:3}}
+    {t:'"你能不能便宜点"',s:{face:10,money:5,thick:5},tag:['RICH-ER','SALE-GOD']},
+    {t:'"你怎么又在摸鱼"',s:{fish:12,slave:5},tag:['FISH-GOD','996-ER']},
+    {t:'"你脾气太好了吧"',s:{naive:10,lick:8},tag:['NICE-GUY','LICK-DOG']},
+    {t:'"你这个人太假了"',s:{oil:8,thick:5},tag:['OIL-MAN','OLD-OIL']}
   ]},
   {q:'关于"上班"这件事：',opts:[
-    {t:'班味已经渗入灵魂了',s:{face:-8,money:-5,oil:-5,slave:15,naive:5,fish:-8,thick:-3,toxic:-3,lick:3}},
-    {t:'上班全靠演，摸鱼才是真',s:{face:-3,money:-3,oil:3,slave:5,naive:-3,fish:12,thick:8,toxic:-3,lick:-3}},
-    {t:'我上班是为了上班之后的消费',s:{face:5,money:10,oil:3,slave:5,naive:3,fish:-3,thick:-3,toxic:-3,lick:-3}},
-    {t:'班？我已经很久没上了',s:{face:-3,money:-8,oil:-5,slave:-10,naive:-3,fish:10,thick:5,toxic:5,lick:-5}}
+    {t:'班味已经渗入灵魂了',s:{slave:15,fish:-8},tag:['996-ER','NICE-GUY']},
+    {t:'上班全靠演，摸鱼才是真',s:{fish:12,oil:3,thick:8},tag:['FISH-GOD','OLD-OIL']},
+    {t:'我上班是为了上班之后的消费',s:{money:10,slave:5},tag:['PAY-ALL','RICH-ER']},
+    {t:'班？我已经很久没上了',s:{slave:-10,fish:10,toxic:5},tag:['TOP-1','GANG-J']}
   ]},
   {q:'有人在群里说了一个明显错误的观点：',opts:[
-    {t:'忍不住，必须纠正他',s:{face:3,money:-3,oil:-5,slave:-3,naive:-5,fish:-5,thick:8,toxic:12,lick:-5}},
-    {t:'打字打了一半又删了',s:{face:-5,money:-3,oil:-3,slave:3,naive:8,fish:3,thick:-5,toxic:-5,lick:5}},
-    {t:'截图发到另一个群里吐槽',s:{face:-3,money:-3,oil:5,slave:-3,naive:-3,fish:3,thick:5,toxic:10,lick:-3}},
-    {t:'管他呢，和我有啥关系',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-3,fish:12,thick:5,toxic:-5,lick:-5}}
+    {t:'忍不住，必须纠正他',s:{toxic:12,thick:8},tag:['GANG-J','DU-SHE']},
+    {t:'打字打了一半又删了',s:{naive:8,thick:-5,lick:5},tag:['LICK-DOG','BIG-YUAN']},
+    {t:'截图发到另一个群里吐槽',s:{toxic:10,oil:5},tag:['DU-SHE','MU-JI']},
+    {t:'管他呢，和我有啥关系',s:{fish:12,thick:5},tag:['LAO-TJ','FISH-GOD']}
   ]},
   {q:'喜欢的人发了一条朋友圈：',opts:[
-    {t:'秒赞+精心编辑一条评论',s:{face:-3,money:-3,oil:8,slave:-3,naive:5,fish:-5,thick:-3,toxic:-5,lick:15}},
-    {t:'看了三遍但什么都没做',s:{face:-5,money:-3,oil:-3,slave:-3,naive:8,fish:-3,thick:-8,toxic:-5,lick:10}},
-    {t:'故意等几个小时再点赞装高冷',s:{face:8,money:-3,oil:8,slave:-3,naive:-3,fish:3,thick:5,toxic:-3,lick:3}},
-    {t:'无所谓，我对谁都一样',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-5,fish:8,thick:8,toxic:3,lick:-12}}
+    {t:'秒赞+精心编辑一条评论',s:{lick:15,oil:8},tag:['LICK-DOG','MA-PI']},
+    {t:'看了三遍但什么都没做',s:{lick:10,naive:8,thick:-8},tag:['DEEP-ER','BIG-YUAN']},
+    {t:'故意等几个小时再点赞装高冷',s:{face:8,oil:8},tag:['ZHUANG-B','OIL-MAN']},
+    {t:'无所谓，我对谁都一样',s:{thick:8,lick:-12,fish:8},tag:['LAO-TJ','TOP-1']}
   ]},
   {q:'你的消费观：',opts:[
-    {t:'该花的花，不该花的也花',s:{face:5,money:15,oil:3,slave:-3,naive:5,fish:-3,thick:3,toxic:-3,lick:-3}},
-    {t:'每一笔都记账，月底复盘',s:{face:-5,money:-10,oil:-5,slave:8,naive:-3,fish:-5,thick:3,toxic:-3,lick:-3}},
-    {t:'9块9包邮是我的快乐源泉',s:{face:-8,money:-10,oil:-5,slave:5,naive:5,fish:5,thick:3,toxic:-3,lick:-3}},
-    {t:'花钱要花在刀刃上——面子上',s:{face:12,money:8,oil:5,slave:-3,naive:-3,fish:-3,thick:3,toxic:-3,lick:-3}}
+    {t:'该花的花，不该花的也花',s:{money:15,naive:5},tag:['PAY-ALL','RICH-ER']},
+    {t:'每一笔都记账，月底复盘',s:{money:-10,slave:8},tag:['996-ER','POOR-G']},
+    {t:'9块9包邮是我的快乐源泉',s:{money:-10,naive:5},tag:['POOR-G','BIG-YUAN']},
+    {t:'花钱要花在刀刃上——面子上',s:{face:12,money:8,oil:5},tag:['ZHUANG-B','SALE-GOD']}
   ]},
   {q:'别人请你帮忙，你：',opts:[
-    {t:'"好的没问题"（内心崩溃）',s:{face:-5,money:-3,oil:-3,slave:3,naive:12,fish:-3,thick:-10,toxic:-5,lick:10}},
-    {t:'"看什么忙"',s:{face:-3,money:-3,oil:-3,slave:-3,naive:-5,fish:3,thick:8,toxic:5,lick:-5}},
-    {t:'"帮可以，请吃饭"',s:{face:5,money:5,oil:3,slave:-3,naive:-3,fish:-3,thick:8,toxic:3,lick:-3}},
-    {t:'"我最近也挺忙的"（其实在追剧）',s:{face:-3,money:-3,oil:-3,slave:-3,naive:-5,fish:12,thick:8,toxic:-3,lick:-5}}
+    {t:'"好的没问题"（内心崩溃）',s:{naive:12,thick:-10,lick:10},tag:['NICE-GUY','LICK-DOG']},
+    {t:'"看什么忙"',s:{thick:8,toxic:5},tag:['TOP-1','GANG-J']},
+    {t:'"帮可以，请吃饭"',s:{thick:8,oil:3,money:5},tag:['SALE-GOD','OLD-OIL']},
+    {t:'"我最近也挺忙的"（其实在追剧）',s:{fish:12,thick:8},tag:['FISH-GOD','LAO-TJ']}
   ]},
   {q:'你觉得自己最大的优点：',opts:[
-    {t:'长得好看（自信脸）',s:{face:10,money:-3,oil:10,slave:-5,naive:-3,fish:-3,thick:8,toxic:-3,lick:-3}},
-    {t:'人缘好',s:{face:-3,money:-3,oil:5,slave:3,naive:5,fish:-3,thick:-3,toxic:-5,lick:8}},
-    {t:'能挣钱',s:{face:5,money:5,oil:-3,slave:8,naive:-3,fish:-5,thick:5,toxic:-3,lick:-3}},
-    {t:'嘴甜',s:{face:-3,money:-3,oil:8,slave:3,naive:3,fish:-3,thick:5,toxic:-5,lick:8}}
+    {t:'长得好看（自信脸）',s:{face:10,oil:10,thick:8},tag:['ZHUANG-B','OIL-MAN']},
+    {t:'人缘好',s:{naive:5,lick:8,oil:5},tag:['NICE-GUY','MU-JI']},
+    {t:'能挣钱',s:{money:5,slave:8,thick:5},tag:['RICH-ER','996-ER']},
+    {t:'嘴甜',s:{oil:8,lick:8},tag:['MA-PI','SALE-GOD']}
   ]},
   {q:'你的手机壁纸：',opts:[
-    {t:'自拍/精修照',s:{face:10,money:-3,oil:10,slave:-5,naive:-3,fish:-3,thick:5,toxic:-3,lick:-3}},
-    {t:'对象/暗恋对象',s:{face:-5,money:-3,oil:3,slave:-3,naive:8,fish:-3,thick:-5,toxic:-5,lick:12}},
-    {t:'默认壁纸懒得换',s:{face:-5,money:-3,oil:-5,slave:5,naive:3,fish:10,thick:-3,toxic:-3,lick:-3}},
-    {t:'一张很贵的名牌Logo',s:{face:10,money:8,oil:5,slave:-3,naive:-3,fish:-3,thick:3,toxic:-3,lick:-3}}
+    {t:'自拍/精修照',s:{face:10,oil:10},tag:['ZHUANG-B','OIL-MAN']},
+    {t:'对象/暗恋对象',s:{lick:12,naive:8},tag:['LICK-DOG','DEEP-ER']},
+    {t:'默认壁纸懒得换',s:{fish:10,slave:5},tag:['LAO-TJ','FISH-GOD']},
+    {t:'一张很贵的名牌Logo',s:{face:10,money:8},tag:['RICH-ER','PAY-ALL']}
   ]},
   {q:'在饭桌上谁买单的问题：',opts:[
-    {t:'"我来我来！"（手比谁都快）',s:{face:12,money:10,oil:3,slave:-3,naive:5,fish:-5,thick:-3,toxic:-3,lick:3}},
-    {t:'假装上厕所',s:{face:-5,money:-8,oil:-3,slave:-3,naive:-3,fish:10,thick:10,toxic:-3,lick:-5}},
-    {t:'"AA吧"',s:{face:-3,money:-5,oil:-3,slave:3,naive:-5,fish:3,thick:5,toxic:3,lick:-3}},
-    {t:'等别人付然后象征性推一下',s:{face:-3,money:-3,oil:8,slave:-3,naive:3,fish:5,thick:5,toxic:-3,lick:-3}}
+    {t:'"我来我来！"（手比谁都快）',s:{face:12,money:10,naive:5},tag:['PAY-ALL','RICH-ER']},
+    {t:'假装上厕所',s:{fish:10,thick:10},tag:['OLD-OIL','FISH-GOD']},
+    {t:'"AA吧"',s:{thick:5,toxic:3},tag:['GANG-J','TOP-1']},
+    {t:'等别人付然后象征性推一下',s:{oil:8,naive:3},tag:['OIL-MAN','MA-PI']}
   ]},
   {q:'你理想中的周末：',opts:[
-    {t:'约朋友出去消费',s:{face:5,money:10,oil:5,slave:-5,naive:3,fish:-8,thick:-3,toxic:-3,lick:3}},
-    {t:'在家躺着什么都不做',s:{face:-8,money:-3,oil:-5,slave:-5,naive:-3,fish:15,thick:-3,toxic:-3,lick:-5}},
-    {t:'加班赚加班费',s:{face:-5,money:5,oil:-5,slave:15,naive:3,fish:-10,thick:-3,toxic:-3,lick:-3}},
-    {t:'找对象约会',s:{face:3,money:5,oil:8,slave:-3,naive:3,fish:-3,thick:-3,toxic:-5,lick:10}}
+    {t:'约朋友出去消费',s:{money:10,face:5,oil:5},tag:['PAY-ALL','ZHUANG-B']},
+    {t:'在家躺着什么都不做',s:{fish:15},tag:['FISH-GOD','LAO-TJ']},
+    {t:'加班赚加班费',s:{slave:15,fish:-10},tag:['996-ER','POOR-G']},
+    {t:'找对象约会',s:{lick:10,oil:8},tag:['LICK-DOG','DEEP-ER']}
   ]},
   {q:'如果突然有了100万：',opts:[
-    {t:'先买个包犒劳自己',s:{face:5,money:12,oil:5,slave:-3,naive:5,fish:-3,thick:-3,toxic:-3,lick:-3}},
-    {t:'存银行一分不动',s:{face:-5,money:-10,oil:-5,slave:8,naive:-3,fish:3,thick:5,toxic:-3,lick:-3}},
-    {t:'投资赚更多',s:{face:5,money:3,oil:-3,slave:3,naive:-5,fish:-3,thick:8,toxic:-3,lick:-3}},
-    {t:'请所有人吃饭让他们知道',s:{face:12,money:10,oil:8,slave:-5,naive:5,fish:-5,thick:3,toxic:-3,lick:3}}
+    {t:'先买个包犒劳自己',s:{money:12,naive:5},tag:['PAY-ALL','RICH-ER']},
+    {t:'存银行一分不动',s:{money:-10,slave:8,thick:5},tag:['POOR-G','996-ER']},
+    {t:'投资赚更多',s:{thick:8,money:3},tag:['TOP-1','SALE-GOD']},
+    {t:'请所有人吃饭让他们知道',s:{face:12,money:10,oil:8},tag:['RICH-ER','ZHUANG-B']}
   ]},
   {q:'你在朋友眼中是：',opts:[
-    {t:'有钱人',s:{face:10,money:10,oil:5,slave:-5,naive:-3,fish:-3,thick:3,toxic:-3,lick:-5}},
-    {t:'老实人',s:{face:-8,money:-3,oil:-5,slave:5,naive:12,fish:-3,thick:-8,toxic:-5,lick:8}},
-    {t:'狠人',s:{face:3,money:-3,oil:-5,slave:-3,naive:-8,fish:-3,thick:10,toxic:10,lick:-8}},
-    {t:'搞笑的',s:{face:-3,money:-3,oil:8,slave:-3,naive:5,fish:5,thick:5,toxic:-3,lick:3}}
+    {t:'有钱人',s:{face:10,money:10,oil:5},tag:['RICH-ER','ZHUANG-B']},
+    {t:'老实人',s:{naive:12,thick:-8,lick:8},tag:['NICE-GUY','BIG-YUAN']},
+    {t:'狠人',s:{thick:10,toxic:10},tag:['GANG-J','TOP-1']},
+    {t:'搞笑的',s:{oil:8,naive:5},tag:['MU-JI','OIL-MAN']}
   ]},
   {q:'收到一份不满意的礼物：',opts:[
-    {t:'"哇好喜欢！"（假笑到脸僵）',s:{face:-3,money:-3,oil:8,slave:3,naive:5,fish:-3,thick:3,toxic:-5,lick:8}},
-    {t:'"这啥啊…下次别买了"',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-5,fish:-3,thick:8,toxic:12,lick:-8}},
-    {t:'收了之后转手送人',s:{face:-3,money:3,oil:-3,slave:-3,naive:-5,fish:5,thick:8,toxic:3,lick:-3}},
-    {t:'发朋友圈感动打卡',s:{face:8,money:-3,oil:8,slave:3,naive:3,fish:-3,thick:3,toxic:-5,lick:5}}
+    {t:'"哇好喜欢！"（假笑到脸僵）',s:{oil:8,naive:5,lick:8},tag:['MA-PI','NICE-GUY']},
+    {t:'"这啥啊…下次别买了"',s:{toxic:12,thick:8},tag:['DU-SHE','GANG-J']},
+    {t:'收了之后转手送人',s:{thick:8,oil:-3},tag:['OLD-OIL','TOP-1']},
+    {t:'发朋友圈感动打卡',s:{face:8,oil:8,lick:5},tag:['ZHUANG-B','LICK-DOG']}
   ]},
   {q:'和领导一起电梯里只有你俩：',opts:[
-    {t:'"领导你气色真好今天！"',s:{face:-3,money:-3,oil:10,slave:5,naive:3,fish:-3,thick:5,toxic:-8,lick:12}},
-    {t:'低头玩手机假装没看到',s:{face:-5,money:-3,oil:-5,slave:3,naive:-3,fish:10,thick:-3,toxic:-3,lick:-5}},
-    {t:'尬聊今天天气',s:{face:-3,money:-3,oil:3,slave:3,naive:5,fish:-3,thick:-3,toxic:-3,lick:3}},
-    {t:'正常打个招呼然后沉默',s:{face:-3,money:-3,oil:-3,slave:5,naive:-3,fish:5,thick:3,toxic:-3,lick:-3}}
+    {t:'"领导你气色真好今天！"',s:{oil:10,lick:12},tag:['MA-PI','SALE-GOD']},
+    {t:'低头玩手机假装没看到',s:{fish:10},tag:['LAO-TJ','FISH-GOD']},
+    {t:'尬聊今天天气',s:{naive:5,slave:3},tag:['NICE-GUY','996-ER']},
+    {t:'正常打个招呼然后沉默',s:{slave:5,thick:3},tag:['TOP-1','OLD-OIL']}
   ]},
   {q:'做了一件丢脸的事：',opts:[
-    {t:'没脸见人了要社死了',s:{face:-5,money:-3,oil:-3,slave:-3,naive:10,fish:-3,thick:-10,toxic:-5,lick:5}},
-    {t:'自己先当段子讲出来',s:{face:5,money:-3,oil:5,slave:-3,naive:-3,fish:-3,thick:10,toxic:3,lick:-3}},
-    {t:'装作啥事没发生',s:{face:3,money:-3,oil:-3,slave:-3,naive:-3,fish:8,thick:8,toxic:-3,lick:-3}},
-    {t:'怪别人"都是你害的"',s:{face:-3,money:-3,oil:-3,slave:-3,naive:-5,fish:-3,thick:5,toxic:10,lick:-3}}
+    {t:'没脸见人了要社死了',s:{naive:10,thick:-10,lick:5},tag:['BIG-YUAN','DEEP-ER']},
+    {t:'自己先当段子讲出来',s:{thick:10,oil:5},tag:['MU-JI','OIL-MAN']},
+    {t:'装作啥事没发生',s:{fish:8,thick:8},tag:['OLD-OIL','LAO-TJ']},
+    {t:'怪别人"都是你害的"',s:{toxic:10,thick:5},tag:['DU-SHE','GANG-J']}
   ]},
   {q:'你对"努力"的看法：',opts:[
-    {t:'不努力就死定了',s:{face:-3,money:-3,oil:-5,slave:12,naive:3,fish:-10,thick:-3,toxic:-3,lick:-3}},
-    {t:'努力不如站对队伍',s:{face:3,money:-3,oil:5,slave:-3,naive:-5,fish:3,thick:8,toxic:3,lick:3}},
-    {t:'能躺着绝不站着',s:{face:-5,money:-5,oil:-5,slave:-8,naive:-3,fish:15,thick:3,toxic:-3,lick:-5}},
-    {t:'你看我像努力的人吗',s:{face:-3,money:-3,oil:-3,slave:-3,naive:-3,fish:10,thick:8,toxic:5,lick:-5}}
+    {t:'不努力就死定了',s:{slave:12,fish:-10},tag:['996-ER','NICE-GUY']},
+    {t:'努力不如站对队伍',s:{oil:5,thick:8},tag:['OLD-OIL','SALE-GOD']},
+    {t:'能躺着绝不站着',s:{fish:15,slave:-8},tag:['FISH-GOD','LAO-TJ']},
+    {t:'你看我像努力的人吗',s:{fish:10,thick:8,toxic:5},tag:['TOP-1','GANG-J']}
   ]},
   {q:'关于"合群"：',opts:[
-    {t:'我在哪哪就是C位',s:{face:12,money:3,oil:8,slave:-5,naive:-5,fish:-5,thick:8,toxic:3,lick:-3}},
-    {t:'配合着聊但内心在摸鱼',s:{face:-3,money:-3,oil:5,slave:3,naive:-3,fish:8,thick:5,toxic:-3,lick:-3}},
-    {t:'不合群但谁也不得罪',s:{face:-5,money:-3,oil:-3,slave:-3,naive:-3,fish:8,thick:5,toxic:-5,lick:-3}},
-    {t:'谁爱合谁合关我屁事',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-5,fish:5,thick:10,toxic:8,lick:-10}}
+    {t:'我在哪哪就是C位',s:{face:12,oil:8,thick:8},tag:['ZHUANG-B','TOP-1']},
+    {t:'配合着聊但内心在摸鱼',s:{fish:8,oil:5},tag:['OLD-OIL','OIL-MAN']},
+    {t:'不合群但谁也不得罪',s:{fish:8,thick:5},tag:['LAO-TJ','NICE-GUY']},
+    {t:'谁爱合谁合关我屁事',s:{thick:10,toxic:8,lick:-10},tag:['GANG-J','DU-SHE']}
   ]},
   {q:'朋友问你借车：',opts:[
-    {t:'"开开开随便开"',s:{face:3,money:3,oil:-3,slave:-3,naive:12,fish:-3,thick:-5,toxic:-5,lick:8}},
-    {t:'"不好意思车刚送去保养"',s:{face:3,money:-3,oil:-3,slave:-3,naive:-8,fish:3,thick:10,toxic:-3,lick:-5}},
-    {t:'"借可以油费你付"',s:{face:-3,money:3,oil:-3,slave:-3,naive:-5,fish:-3,thick:8,toxic:5,lick:-3}},
-    {t:'直接已读不回',s:{face:-5,money:-3,oil:-5,slave:-3,naive:-5,fish:5,thick:10,toxic:8,lick:-10}}
+    {t:'"开开开随便开"',s:{naive:12,thick:-5,lick:8},tag:['NICE-GUY','BIG-YUAN']},
+    {t:'"不好意思车刚送去保养"',s:{thick:10},tag:['OLD-OIL','OIL-MAN']},
+    {t:'"借可以油费你付"',s:{thick:8,toxic:5},tag:['SALE-GOD','GANG-J']},
+    {t:'直接已读不回',s:{thick:10,toxic:8,lick:-10},tag:['TOP-1','DU-SHE']}
   ]},
   {q:'你的微信备注别人：',opts:[
-    {t:'全名+公司+职位',s:{face:3,money:-3,oil:5,slave:8,naive:-3,fish:-5,thick:-3,toxic:-3,lick:3}},
-    {t:'外号/绰号',s:{face:-3,money:-3,oil:5,slave:-3,naive:-3,fish:3,thick:5,toxic:5,lick:-3}},
-    {t:'从来不改备注',s:{face:-5,money:-3,oil:-5,slave:3,naive:5,fish:10,thick:-3,toxic:-3,lick:-3}},
-    {t:'"大冤种""提款机""渣男"',s:{face:-3,money:-3,oil:3,slave:-3,naive:-3,fish:3,thick:8,toxic:10,lick:-3}}
+    {t:'全名+公司+职位',s:{oil:5,slave:8},tag:['SALE-GOD','996-ER']},
+    {t:'外号/绰号',s:{thick:5,toxic:5,oil:5},tag:['MU-JI','DU-SHE']},
+    {t:'从来不改备注',s:{fish:10,naive:5},tag:['LAO-TJ','FISH-GOD']},
+    {t:'"大冤种""提款机""渣男"',s:{toxic:10,thick:8},tag:['DU-SHE','GANG-J']}
   ]},
   {q:'半夜睡不着因为：',opts:[
-    {t:'在想怎么赚更多钱',s:{face:5,money:5,oil:-3,slave:8,naive:-3,fish:-5,thick:3,toxic:-3,lick:-5}},
-    {t:'在翻喜欢的人的朋友圈',s:{face:-5,money:-3,oil:5,slave:-3,naive:8,fish:-3,thick:-5,toxic:-5,lick:15}},
-    {t:'在想今天丢脸的事',s:{face:-5,money:-3,oil:-3,slave:-3,naive:10,fish:-3,thick:-8,toxic:-5,lick:5}},
-    {t:'刷手机根本停不下来',s:{face:-3,money:3,oil:-3,slave:3,naive:-3,fish:10,thick:-3,toxic:-3,lick:-3}}
+    {t:'在想怎么赚更多钱',s:{money:5,slave:8,thick:3},tag:['996-ER','SALE-GOD']},
+    {t:'在翻喜欢的人的朋友圈',s:{lick:15,naive:8},tag:['LICK-DOG','DEEP-ER']},
+    {t:'在想今天丢脸的事',s:{naive:10,thick:-8,lick:5},tag:['BIG-YUAN','DEEP-ER']},
+    {t:'刷手机根本停不下来',s:{fish:10},tag:['FISH-GOD','MU-JI']}
   ]},
   {q:'别人夸你"你人真好"：',opts:[
-    {t:'开心到飞起',s:{face:-5,money:-3,oil:-3,slave:3,naive:12,fish:-3,thick:-5,toxic:-5,lick:10}},
-    {t:'"可别了，好人没好报"',s:{face:-3,money:-3,oil:-3,slave:3,naive:5,fish:3,thick:5,toxic:8,lick:-5}},
-    {t:'"那当然，不看看我是谁"',s:{face:10,money:-3,oil:8,slave:-3,naive:-5,fish:-3,thick:8,toxic:3,lick:-5}},
-    {t:'"少给我灌迷魂汤"',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-8,fish:3,thick:10,toxic:8,lick:-8}}
+    {t:'开心到飞起',s:{naive:12,lick:10},tag:['NICE-GUY','LICK-DOG']},
+    {t:'"可别了，好人没好报"',s:{thick:5,toxic:8},tag:['DU-SHE','OLD-OIL']},
+    {t:'"那当然，不看看我是谁"',s:{face:10,oil:8,thick:8},tag:['ZHUANG-B','TOP-1']},
+    {t:'"少给我灌迷魂汤"',s:{thick:10,toxic:8,lick:-8},tag:['GANG-J','TOP-1']}
   ]},
   {q:'最后一题——给自己一句话总结：',opts:[
-    {t:'我这个人吧，不装逼会死',s:{face:15,money:3,oil:8,slave:-5,naive:-5,fish:-5,thick:8,toxic:3,lick:-5}},
-    {t:'我善良但不是好欺负的',s:{face:-3,money:-3,oil:-3,slave:3,naive:10,fish:-3,thick:5,toxic:3,lick:5}},
-    {t:'我就想安安静静摸个鱼',s:{face:-5,money:-3,oil:-5,slave:5,naive:-3,fish:15,thick:3,toxic:-5,lick:-5}},
-    {t:'爱谁谁，老子就这样',s:{face:-3,money:-3,oil:-5,slave:-3,naive:-5,fish:5,thick:12,toxic:10,lick:-10}}
+    {t:'我这个人吧，不装逼会死',s:{face:15,oil:8,thick:8},tag:['ZHUANG-B','OIL-MAN']},
+    {t:'我善良但不是好欺负的',s:{naive:10,thick:5,lick:5},tag:['NICE-GUY','DEEP-ER']},
+    {t:'我就想安安静静摸个鱼',s:{fish:15,slave:5},tag:['FISH-GOD','LAO-TJ']},
+    {t:'爱谁谁，老子就这样',s:{thick:12,toxic:10,lick:-10},tag:['GANG-J','TOP-1']}
   ]}
 ];
 
 /* ---------- 引擎 ---------- */
 var ans=[];
 function calc(){
-  var votes={};TYPES.forEach(function(t){votes[t.code]=0;});
   var sc={};DIMS.forEach(function(d){sc[d.id]=50;});
+  var votes={};TYPES.forEach(function(t){votes[t.code]=0;});
   ans.forEach(function(oi,qi){
     if(oi<0||qi>=QS.length)return;
-    var o=QS[qi].opts[oi];if(!o||!o.s)return;
-    Object.keys(o.s).forEach(function(k){
+    var o=QS[qi].opts[oi];if(!o)return;
+    if(o.s){Object.keys(o.s).forEach(function(k){
       if(sc[k]!==undefined) sc[k]=Math.max(0,Math.min(100,sc[k]+o.s[k]));
-    });
+    });}
+    if(o.tag){o.tag.forEach(function(c){
+      votes[c]=(votes[c]||0)+1;
+    });}
   });
-  return sc;
+  return{sc:sc,votes:votes};
 }
-function match(sc){
-  var best=null,bestCos=-2;
-  var sv=[],smag=0;
-  DIMS.forEach(function(dm){var v=(sc[dm.id]||50)-50;sv.push(v);smag+=v*v;});
-  smag=Math.sqrt(smag)||1;
-  TYPES.forEach(function(t){
-    var dot=0,tmag=0;
-    DIMS.forEach(function(dm,i){var tv=(t.v[dm.id]||50)-50;dot+=sv[i]*tv;tmag+=tv*tv;});
-    tmag=Math.sqrt(tmag)||1;
-    var cos=dot/(smag*tmag);
-    if(cos>bestCos){bestCos=cos;best=t;}
+var TAG_MAX={};
+(function(){QS.forEach(function(q){q.opts.forEach(function(o){if(o.tag)o.tag.forEach(function(c){TAG_MAX[c]=(TAG_MAX[c]||0)+1;});});});})();
+function match(res){
+  var sc=res.sc,votes=res.votes;
+  var ranked=[];
+  TYPES.forEach(function(t,i){
+    var euc=0,wt=0;
+    DIMS.forEach(function(dm){
+      var sv=sc[dm.id]||50, tv=t.v[dm.id]||50;
+      var w=(tv>=80||tv<=20)?3:(tv>=65||tv<=35)?2:1;
+      euc+=w*(sv-tv)*(sv-tv); wt+=w;
+    });
+    var dimScore=1/(1+Math.sqrt(euc/wt));
+    var maxV=TAG_MAX[t.code]||1;
+    var voteScore=(votes[t.code]||0)/maxV;
+    var combo=dimScore*0.15+voteScore*0.85;
+    ranked.push({i:i,score:combo});
   });
-  var pct=Math.max(58,Math.min(96,Math.round(60+bestCos*36)));
+  ranked.sort(function(a,b){return b.score-a.score;});
+  var best=TYPES[ranked[0].i];
+  var pct=Math.max(62,Math.min(96,Math.round(ranked[0].score*80+30)));
   return{type:best,pct:pct};
 }
 
@@ -598,7 +628,7 @@ function upd(){
 
 /* ---------- 结果渲染 ---------- */
 function showResult(){
-  var sc=calc(),m=match(sc),t=m.type;
+  var res=calc(),m=match(res),t=m.type,sc=res.sc;
   var el=document.getElementById('rlayout');
   var h='<div class="result-top">';
   h+='<div class="poster-box rbox"><span class="poster-emoji">'+t.emoji+'</span>';
@@ -629,7 +659,7 @@ function showResult(){
   h+='<div class="rbox note-box"><h3>友情提示</h3>';
   h+='<p>本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、算命或人生判决书。<br>但如果你觉得准——说明你确实是这种人，别挣扎了。</p></div>';
   el.innerHTML=h;
-  document.getElementById('fnote').innerHTML='NBTI · NPC Behavioral Type Indicator · <b>@费率</b>';
+  document.getElementById('fnote').innerHTML='NBTI · NPC Behavioral Type Indicator · <b>@羊肉蛋汤</b>';
   show('result');
 }
 
