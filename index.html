@@ -675,8 +675,15 @@ function showResult(){
 
   h+='<div class="rbox note-box"><h3>友情提示</h3>';
   h+='<p>本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、算命或人生判决书。<br>但如果你觉得准——说明你确实是这种人，别挣扎了。</p></div>';
+
+  h+='<div style="margin-top:20px;padding:18px 20px;background:#f5f9f6;border-radius:16px;border:1px solid var(--line);text-align:center;line-height:2.2;font-size:13px;color:var(--muted)">';
+  h+='<div style="font-weight:700;color:var(--accent-strong);font-size:14px;margin-bottom:4px">NBTI · NPC Behavioral Type Indicator</div>';
+  h+='<div>原作者：<a href="https://v.douyin.com/ZQ0bwJz4V0c/" target="_blank" style="color:#1e80ff;text-decoration:none;font-weight:600">DOU音@羊肉蛋汤</a></div>';
+  h+='<div>托管：Cloudflare (免费)&emsp;·&emsp;域名：spansoda.cn (自费)</div>';
+  h+='</div>';
+
   el.innerHTML=h;
-  document.getElementById('fnote').innerHTML='NBTI · NPC Behavioral Type Indicator · <b>@羊肉蛋汤</b>';
+  document.getElementById('fnote').textContent='';
   show('result');
 }
 
