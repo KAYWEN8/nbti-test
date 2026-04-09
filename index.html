@@ -108,6 +108,14 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .note-box p{color:var(--muted);font-size:13px;line-height:1.8}
 .result-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
 .footer-note{margin-top:16px;color:var(--muted);font-size:12px;line-height:1.7;text-align:center}
+.poster-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:rgba(0,0,0,.75);justify-content:center;align-items:center;flex-direction:column;padding:20px}
+.poster-overlay.show{display:flex}
+.poster-overlay canvas{max-width:92vw;max-height:75vh;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.4)}
+.poster-overlay .poster-tip{color:#fff;font-size:14px;margin-top:16px;text-align:center;line-height:1.8;opacity:.85}
+.poster-overlay .poster-close{position:absolute;top:16px;right:20px;color:#fff;font-size:28px;cursor:pointer;background:none;border:none;opacity:.7}
+.poster-overlay .poster-close:hover{opacity:1}
+.btn-share{background:linear-gradient(135deg,#5b7a62,#3d5a44);color:#fff;border:none;padding:12px 24px;border-radius:24px;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.5px}
+.btn-share:active{transform:scale(.96)}
 @media(max-width:600px){.shell{padding:14px 12px 42px}.hero,.test-wrap,.result-wrap{padding:16px}.result-top{grid-template-columns:1fr}}
 </style>
 </head>
@@ -191,6 +199,7 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
     <div class="result-layout" id="rlayout"></div>
     <div class="result-actions">
       <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn-share" id="shareBtn">📸 生成海报发朋友圈</button>
         <button class="btn-secondary" id="retryBtn">重新鉴定</button>
         <button class="btn-primary" id="homeBtn">回到首页</button>
       </div>
@@ -200,6 +209,13 @@ button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 </section>
 
 </div>
+
+<div class="poster-overlay" id="posterOverlay">
+  <button class="poster-close" id="posterClose">&times;</button>
+  <canvas id="posterCanvas"></canvas>
+  <div class="poster-tip">📱 长按图片保存到相册，然后发朋友圈<br><span style="font-size:12px;opacity:.7">（电脑端：右键 → 另存为图片）</span></div>
+</div>
+
 <script>
 /* ============================================================
    NBTI — NPC Behavioral Type Indicator
@@ -629,6 +645,7 @@ function upd(){
 /* ---------- 结果渲染 ---------- */
 function showResult(){
   var res=calc(),m=match(res),t=m.type,sc=res.sc;
+  _lastResult={type:t,pct:m.pct,sc:sc};
   var el=document.getElementById('rlayout');
   var h='<div class="result-top">';
   h+='<div class="poster-box rbox"><span class="poster-emoji">'+t.emoji+'</span>';
@@ -663,12 +680,130 @@ function showResult(){
   show('result');
 }
 
+/* ---------- 海报生成 ---------- */
+var _lastResult=null;
+function genPoster(){
+  if(!_lastResult)return;
+  var t=_lastResult.type, pct=_lastResult.pct, sc=_lastResult.sc;
+  var W=750, H=1334;
+  var cvs=document.getElementById('posterCanvas');
+  cvs.width=W; cvs.height=H;
+  var ctx=cvs.getContext('2d');
+
+  var grd=ctx.createLinearGradient(0,0,0,H);
+  grd.addColorStop(0,'#e8f0e9'); grd.addColorStop(0.5,'#f5f9f6'); grd.addColorStop(1,'#dce8de');
+  ctx.fillStyle=grd; ctx.fillRect(0,0,W,H);
+
+  ctx.fillStyle='#fff'; roundRect(ctx,40,40,W-80,H-80,24); ctx.fill();
+  ctx.strokeStyle='#d0ddd3'; ctx.lineWidth=1.5; roundRect(ctx,40,40,W-80,H-80,24); ctx.stroke();
+
+  ctx.fillStyle='#2d3a30'; ctx.font='bold 28px system-ui,sans-serif';
+  ctx.textAlign='center'; ctx.fillText('NBTI · NPC人格鉴定',W/2,110);
+
+  ctx.fillStyle='#8a9e8f'; ctx.font='16px system-ui,sans-serif';
+  ctx.fillText('哦？SBTI都来了，那我的NBTI呢？',W/2,145);
+
+  ctx.save();
+  ctx.beginPath(); ctx.arc(W/2,260,70,0,Math.PI*2); ctx.closePath();
+  ctx.fillStyle='#e8f0e9'; ctx.fill();
+  ctx.strokeStyle='#5b7a62'; ctx.lineWidth=3; ctx.stroke();
+  ctx.font='72px system-ui,sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillStyle='#000'; ctx.fillText(t.emoji,W/2,265);
+  ctx.restore();
+
+  ctx.fillStyle='#1e2a22'; ctx.font='bold 42px system-ui,sans-serif';
+  ctx.textAlign='center'; ctx.fillText(t.cn,W/2,380);
+
+  ctx.fillStyle='#5b7a62'; ctx.font='bold 22px system-ui,sans-serif';
+  ctx.fillText(t.code,W/2,415);
+
+  roundRect(ctx,W/2-90,440,180,44,22);
+  ctx.fillStyle='#edf5ee'; ctx.fill();
+  ctx.strokeStyle='#b8d8ba'; ctx.lineWidth=1; roundRect(ctx,W/2-90,440,180,44,22); ctx.stroke();
+  ctx.fillStyle='#3d5a44'; ctx.font='bold 18px system-ui,sans-serif';
+  ctx.fillText('匹配度 '+pct+'%',W/2,468);
+
+  ctx.textAlign='left'; ctx.font='16px system-ui,sans-serif'; ctx.fillStyle='#5a6b5e';
+  var introLines=wrapText(ctx,'"'+t.intro+'"',W-160);
+  var iy=520;
+  ctx.font='italic 16px system-ui,sans-serif'; ctx.fillStyle='#7a8e7f'; ctx.textAlign='center';
+  introLines.forEach(function(ln){ctx.fillText(ln,W/2,iy);iy+=24;});
+
+  var dimY=iy+30;
+  ctx.textAlign='left';
+  ctx.fillStyle='#3d5a44'; ctx.font='bold 18px system-ui,sans-serif';
+  ctx.fillText('九维度属性',80,dimY); dimY+=12;
+
+  var barW=540, barH=14, barX=130;
+  DIMS.forEach(function(d){
+    dimY+=30;
+    var v=Math.max(0,Math.min(100,sc[d.id]||50));
+    ctx.fillStyle='#4a5e4e'; ctx.font='14px system-ui,sans-serif'; ctx.textAlign='right';
+    ctx.fillText(d.name,barX-10,dimY+4);
+    roundRect(ctx,barX,dimY-6,barW,barH,7);
+    ctx.fillStyle='#edf3ee'; ctx.fill();
+    var fillW=Math.max(barH,barW*v/100);
+    roundRect(ctx,barX,dimY-6,fillW,barH,7);
+    var bGrd=ctx.createLinearGradient(barX,0,barX+fillW,0);
+    bGrd.addColorStop(0,'#97b59c'); bGrd.addColorStop(1,'#5b7a62');
+    ctx.fillStyle=bGrd; ctx.fill();
+    ctx.fillStyle='#5b7a62'; ctx.font='bold 13px system-ui,sans-serif'; ctx.textAlign='left';
+    ctx.fillText(v,barX+barW+8,dimY+4);
+  });
+
+  var tagY=dimY+45;
+  ctx.textAlign='center';
+  var tagsPerRow=2, tagGap=12, tagH=34;
+  var totalTagW=W-160;
+  var singleTagW=(totalTagW-tagGap*(tagsPerRow-1))/tagsPerRow;
+  t.traits.forEach(function(tr,i){
+    var row=Math.floor(i/tagsPerRow), col=i%tagsPerRow;
+    var tx=80+col*(singleTagW+tagGap);
+    var ty=tagY+row*(tagH+10);
+    roundRect(ctx,tx,ty,singleTagW,tagH,17);
+    ctx.fillStyle='#edf5ee'; ctx.fill();
+    ctx.strokeStyle='#c5ddc8'; ctx.lineWidth=1; roundRect(ctx,tx,ty,singleTagW,tagH,17); ctx.stroke();
+    ctx.fillStyle='#3d5a44'; ctx.font='bold 13px system-ui,sans-serif';
+    ctx.fillText(tr,tx+singleTagW/2,ty+22);
+  });
+
+  var footY=H-120;
+  ctx.fillStyle='#c5ddc8'; ctx.fillRect(80,footY,W-160,1);
+
+  ctx.fillStyle='#8a9e8f'; ctx.font='14px system-ui,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('扫码或访问测你的NPC属性',W/2,footY+30);
+  ctx.fillStyle='#5b7a62'; ctx.font='bold 16px system-ui,sans-serif';
+  ctx.fillText('nbti.coco.dev',W/2,footY+56);
+  ctx.fillStyle='#b0c4b4'; ctx.font='12px system-ui,sans-serif';
+  ctx.fillText('原作者：DOU音@羊肉蛋汤',W/2,footY+82);
+
+  document.getElementById('posterOverlay').classList.add('show');
+}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+  ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);
+  ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();
+}
+function wrapText(ctx,text,maxW){
+  var lines=[],line='';
+  for(var i=0;i<text.length;i++){
+    var test=line+text[i];
+    if(ctx.measureText(test).width>maxW&&line.length>0){lines.push(line);line=text[i];}
+    else line=test;
+  }
+  if(line)lines.push(line);
+  return lines;
+}
+
 /* ---------- 绑定事件 ---------- */
 document.getElementById('startBtn').onclick=function(){show('test');renderQ();};
 document.getElementById('backBtn').onclick=function(){show('intro');};
 document.getElementById('submitBtn').onclick=function(){show('loading');setTimeout(showResult,2800);};
 document.getElementById('retryBtn').onclick=function(){show('test');renderQ();};
 document.getElementById('homeBtn').onclick=function(){show('intro');};
+document.getElementById('shareBtn').onclick=genPoster;
+document.getElementById('posterClose').onclick=function(){document.getElementById('posterOverlay').classList.remove('show');};
+document.getElementById('posterOverlay').onclick=function(e){if(e.target===this)this.classList.remove('show');};
 </script>
 </body>
 </html>
